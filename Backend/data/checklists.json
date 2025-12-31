@@ -1,0 +1,795 @@
+{
+  "preGame": {
+    "name": "FRONT TABLE/ BENCHES",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Table Connection",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify Patch cables under tabletop are connected to matching cables for away and home sides of the table",
+            "completed": true
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Switch Configuration || Ports 1-2 (Events VLAN) || Away Bench Connection",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Patch Port 1 -> Panel Port 1 above switch",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "long black cable labeld 'Switch-Away' to patch port 1 (left end of table)",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Run cable under bench seats",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Place Netgear on floor under bench",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Connect 3 blue Ethernet cables to Netgear",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Verify connectivity: Away Bench IP - 172.32.x.x",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-3",
+        "title": "Switch Configuration || Ports 1-2 (Event's VLAN) || Away Phone",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Port 2 -> Patch to Panel Port 2 above switch",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Connect visitor phone (check label under phone) using blue ethernet cable",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Place phone at end of table near away bench",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Attatch Referee replay monitor to the monitor mount on table",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-4",
+        "title": "Switch Configuration || Ports 3-10 (NBA VLAN) || Tissot",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Port 3 -> Patch panel por 20 (find labeled ethernet cord",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-5",
+        "title": "Switch Configuration || Ports 3-10 (NBA VLAN) || Tracey's Laptop",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Port 4 --> Direct connect using labled cord",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Connect laptop to UPS -> UPS to table outlet",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Launch site: 10.111.24.29",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-6",
+        "title": "Switch Configuration || Ports 11-20 (Event's VLAN) || Sound Meter",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Port 11 -> Direct connect",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Unpack mic & cover, route under table, place in front of switch",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Connect with Labled ethernet cord",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Plug in power cord to table outlet",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-7",
+        "title": "Switch Configuration || Ports 11-20 (Event's VLAN) || Phone",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Port 12 -> Direct Connect Statistician phone (look for labeled ethernet cord) and place to the left of the monitor",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Port 13 -> Patch panel D020: Security phone (look for labeled ethernet cord) and place to the right of the monitor",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Port 14 -> Patch panel D021: Tracey's phone (look for labeled ethernet cord)",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Port 15 -> Patch panel D023: Tracey's phone light (look for labeled ethernet cord)",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-8",
+        "title": "Switch Configuration || Ports 21-22 (BBOPS's VLAN) || Home Bench",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Port 21 -> Patch panel D024",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Connect long black ethernet cabled labeled 'Switch-Home' to patch port 24 on right side of table",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "run cable underneath bench seats, pushing down to avoid tripping hazard at seat gap",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Place Netgear switch on floor under second row bench and run cable through cable trough",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Connect 3 grey ethernet cables to Netgear",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Verify connectivity: Home Bench IP - 172.32.x.x",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-9",
+        "title": "Switch Configuration || Ports 23-24 || Trunk Ports",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Connect long orange labeled ethernet cord from 'dasher wall NBA port (D003)' -> under floor cover -> to port 24 on front table switch ",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-10",
+        "title": "Switch Configuration || NBA Equipment ",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Place Precisicion Time to right of the Tissot machine",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Connect Precision Time via Ethernet to Port 5 on switch",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Connect brown VGA cable from the back of Precision time to the back of the Tissot machine",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Connect Precision Time USB cable to back of precision time, run underneath table and connect to dasher wall port labeled 'PTS'",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-11",
+        "title": "Breakdown Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Power off al devices",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect and coil all cabeles ",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Return all items to labeled crates and cart in DVOM Closet",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Confirm all cables and equipment are labeled and secured",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "DVOM": {
+    "name": "D-VOM MEDIA CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Place switch under D-VOM riser section",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Plug in switch for power",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Connect trunk to port 16 on switch(patch panel wall)",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Run biscuit cables up to tables and secure",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Connect blue ethernet cables to biscuits",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Test all patch cables for internet connectivity",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Breakdown Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect switch and biscuit cables",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Coil and store all cables",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Return all items to labeled crates and cart in DVOM Closet",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "RefPacks": {
+    "name": "REFEREE PACKS CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist || Deliver belt packs ~ 90 minutes before tip-off",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Insert new batteries; discard old ones",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Verify current game loaded on PTS screen(front table)",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Power on all belt packs",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Confirm battery levels are fully green",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Record referee names and corresponding pack numbers",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "label each pack with the ref name",
+            "completed": false
+          },
+          {
+            "id": "item-7",
+            "label": "power off and deliver to referees/officers outside Officials room in D-VOM",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Breakdown Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect switch and biscuit cables",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Coil and store all cables",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Return all items to labeled crates and cart in DVOM Closet",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "EastClub": {
+    "name": "EAST CLUB CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Place switch on top of table",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Connect switch to trunk port 16 under bleacher using blue Ethernet cable labeled 'trunk'",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Ports 1-6(Stats Laptops & Replay Monitor",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Port 1 - Secondary LT",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Port 2 - Primary LT",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Port 3 - PR LT",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Plug all chargers into UPS",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Arrange laptops: Secondary -> Primary -> PR",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Connect clock cable, a blue ethernet cable labeled 'clock', to the Primary LT Ethernet/USB adapter",
+            "completed": false
+          },
+          {
+            "id": "item-7",
+            "label": "Power on replay monitor",
+            "completed": false
+          },
+          {
+            "id": "item-8",
+            "label": "Connect keyboard, mouse, replay controller",
+            "completed": false
+          },
+          {
+            "id": "item-9",
+            "label": "Double-check peripheral function",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-3",
+        "title": "Ports 7-8 (Visitor Radio Brics)",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Provide 3 brics (stats sets up)",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "run black Ethernet to far enf of table",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "run blue ethernet to the left of the stat monitor",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-4",
+        "title": "Printer",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Plug into power strip under bleacher(extension cord)",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Connect to PR laptop via USB",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-5",
+        "title": "Breakdown Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Power off laptops",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect and coil all Ethernet and power cables.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Return switch, cables and devices to MC Quad D Closet",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "WestClub": {
+    "name": "WEST CLUB CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Provide 6ft Pink Ethernet cables to sections 104, 105, 106 and 108",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Test biscuit connections for internet",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "leave 4 /biscuits to the right of table in section 108 free for social media ethernet cables (they will plug them in).",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Breakdown Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Collect all cables at the end of the game",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "bbOps": {
+    "name": "BBOPS CHECKLIST",
+    "techName": "(manager only)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Test",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Call 201-974-6917 for system test",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Test game clock, stats radio and headset",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "label chanel for stats radio",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Print sample stats page",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Complete NBA Form linked on physical instructions",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Media Workroom",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify Every Cubicle is on EVENT VLAN with internet connection",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Verify Netgear switch is powered on and connected to EVENT VLAN",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-3",
+        "title": "Game Night Office",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify stats computer is connected to NBA VLAN",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Verify phone is powered on and has a dial tone",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Verify stats phone is connected to NBA VLAN",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-4",
+        "title": "Trucks (ADHOC)",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify trucks have internet and stats feeds",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-5",
+        "title": "R2D2 (ADHOC) || Location: Star 5 Dressing room",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify power and network connectivity",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-6",
+        "title": "Press Conference (ADHOC) || SETUP CHECKLIST",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Setup Zoom Carts",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Hang NBA backdrop",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Setup extra monitor, keyboard, microphone, mic stand, and mouse on table",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ],
+    "managerVerified": false,
+    "verifiedAt": null
+  }
+}
