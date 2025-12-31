@@ -41,12 +41,12 @@
           },
           {
             "id": "item-4",
-            "label": "Place Netgear on floor under bench",
+            "label": "Place Cisco switch on floor under bench",
             "completed": false
           },
           {
             "id": "item-5",
-            "label": "Connect 3 blue Ethernet cables to Netgear",
+            "label": "Connect 3 blue Ethernet cables to Cisco switch in ports 6-8",
             "completed": false
           },
           {
@@ -66,17 +66,17 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Port 2 -> Patch to Panel Port 2 above switch",
+            "label": "Port 2 -> Patch Panel Port 2 above switch",
             "completed": false
           },
           {
             "id": "item-2",
-            "label": "Connect visitor phone (check label under phone) using blue ethernet cable",
+            "label": "Connect visitor phone (check label under phone) using white ethernet cable",
             "completed": false
           },
           {
             "id": "item-3",
-            "label": "Place phone at end of table near away bench",
+            "label": "Place phone at end of table near away bench and check for dial tone",
             "completed": false
           },
           {
@@ -90,13 +90,28 @@
       },
       {
         "id": "pg-4",
-        "title": "Switch Configuration || Ports 3-10 (NBA VLAN) || Tissot",
+        "title": "Switch Configuration || Ports 3-10 (NBA VLAN) || NBA Equipment",
         "subtitle": false,
         "assignedTech": "(unassigned)",
         "items": [
           {
             "id": "item-1",
-            "label": "Port 3 -> Patch panel por 20 (find labeled ethernet cord",
+            "label": "Place Precisicion Time to right of the Tissot machine",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Connect Precision Time via Ethernet to Port 4 on switch using labeled ethernet cord",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Connect brown VGA cable from the back of Precision time to the back of the Tissot machine",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Connect Precision Time USB cable to back of precision time, run underneath table and connect to dasher wall port labeled 'PTS'",
             "completed": false
           }
         ],
@@ -111,7 +126,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Port 4 --> Direct connect using labled cord",
+            "label": "Port 4 --> Direct connect using labled yellow ethernet cord",
             "completed": false
           },
           {
@@ -146,7 +161,7 @@
           },
           {
             "id": "item-3",
-            "label": "Connect with Labled ethernet cord",
+            "label": "Connect with Labled green ethernet cord",
             "completed": false
           },
           {
@@ -211,12 +226,12 @@
           },
           {
             "id": "item-4",
-            "label": "Place Netgear switch on floor under second row bench and run cable through cable trough",
+            "label": "Place Cisco switch on floor under second row bench and run cable through cable trough",
             "completed": false
           },
           {
             "id": "item-5",
-            "label": "Connect 3 grey ethernet cables to Netgear",
+            "label": "Connect 3 grey ethernet cables to Cisco",
             "completed": false
           },
           {
@@ -244,36 +259,6 @@
         "verifiedAt": null
       },
       {
-        "id": "pg-10",
-        "title": "Switch Configuration || NBA Equipment ",
-        "subtitle": false,
-        "assignedTech": "(unassigned)",
-        "items": [
-          {
-            "id": "item-1",
-            "label": "Place Precisicion Time to right of the Tissot machine",
-            "completed": false
-          },
-          {
-            "id": "item-2",
-            "label": "Connect Precision Time via Ethernet to Port 5 on switch",
-            "completed": false
-          },
-          {
-            "id": "item-3",
-            "label": "Connect brown VGA cable from the back of Precision time to the back of the Tissot machine",
-            "completed": false
-          },
-          {
-            "id": "item-4",
-            "label": "Connect Precision Time USB cable to back of precision time, run underneath table and connect to dasher wall port labeled 'PTS'",
-            "completed": false
-          }
-        ],
-        "managerVerified": false,
-        "verifiedAt": null
-      },
-      {
         "id": "pg-11",
         "title": "Breakdown Checklist",
         "subtitle": false,
@@ -281,12 +266,12 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Power off al devices",
+            "label": "Power off all devices",
             "completed": false
           },
           {
             "id": "item-2",
-            "label": "Disconnect and coil all cabeles ",
+            "label": "Disconnect and coil all cables from the table equipment and switches. Disconnect all cables underneath the bench.",
             "completed": false
           },
           {
@@ -327,7 +312,7 @@
           },
           {
             "id": "item-3",
-            "label": "Connect trunk to port 16 on switch(patch panel wall)",
+            "label": "Connect trunk to port 16 on switch (using purple cable from the closet)",
             "completed": false
           },
           {
@@ -342,7 +327,7 @@
           },
           {
             "id": "item-6",
-            "label": "Test all patch cables for internet connectivity",
+            "label": "Test all patch cables for internet connectivity using the fluke",
             "completed": false
           }
         ],
@@ -398,27 +383,27 @@
           },
           {
             "id": "item-3",
-            "label": "Power on all belt packs",
-            "completed": false
-          },
-          {
-            "id": "item-4",
-            "label": "Confirm battery levels are fully green",
-            "completed": false
-          },
-          {
-            "id": "item-5",
             "label": "Record referee names and corresponding pack numbers",
             "completed": false
           },
           {
+            "id": "item-4",
+            "label": "Label each pack with the referee name and make sure there are two clips connected for each pack",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Power on all belt packs",
+            "completed": false
+          },
+          {
             "id": "item-6",
-            "label": "label each pack with the ref name",
+            "label": "Confirm battery levels are fully green",
             "completed": false
           },
           {
             "id": "item-7",
-            "label": "power off and deliver to referees/officers outside Officials room in D-VOM",
+            "label": "Make sure power is on and deliver to referees/officers outside Officials room in D-VOM before the game",
             "completed": false
           }
         ],
@@ -433,17 +418,17 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Disconnect switch and biscuit cables",
+            "label": "Collect all referee packs after the game",
             "completed": false
           },
           {
             "id": "item-2",
-            "label": "Coil and store all cables",
+            "label": "Power off referee packs.",
             "completed": false
           },
           {
             "id": "item-3",
-            "label": "Return all items to labeled crates and cart in DVOM Closet",
+            "label": "Return all items to box in IT Office bin.",
             "completed": false
           }
         ],
@@ -478,53 +463,83 @@
       },
       {
         "id": "pg-2",
-        "title": "Ports 1-6(Stats Laptops & Replay Monitor",
+        "title": "Ports 1-6(Stats Laptops & Replay Monitor)",
         "subtitle": false,
         "assignedTech": "(unassigned)",
         "items": [
           {
             "id": "item-1",
-            "label": "Port 1 - Secondary LT",
+            "label": "Arrange laptops on table: Secondary -> Primary -> PR",
             "completed": false
           },
           {
             "id": "item-2",
-            "label": "Port 2 - Primary LT",
+            "label": "Port 1 -> Secondary LT",
             "completed": false
           },
           {
             "id": "item-3",
-            "label": "Port 3 - PR LT",
+            "label": "Port 2 -> Primary LT",
             "completed": false
           },
           {
             "id": "item-4",
-            "label": "Plug all chargers into UPS",
+            "label": "Port 3 -> PR LT",
             "completed": false
           },
           {
             "id": "item-5",
-            "label": "Arrange laptops: Secondary -> Primary -> PR",
+            "label": "Place UPS on table next to switch",
             "completed": false
           },
           {
             "id": "item-6",
-            "label": "Connect clock cable, a blue ethernet cable labeled 'clock', to the Primary LT Ethernet/USB adapter",
+            "label": "Plug all chargers into UPS",
             "completed": false
           },
           {
             "id": "item-7",
-            "label": "Power on replay monitor",
+            "label": "Connect clock cable, a black ethernet cable labeled 'clock', to the Primary LT Ethernet via USB adapter",
             "completed": false
           },
           {
             "id": "item-8",
-            "label": "Connect keyboard, mouse, replay controller",
+            "label": "Place Replay monitor on table to the left of the switch",
             "completed": false
           },
           {
             "id": "item-9",
+            "label": "Power on replay monitor",
+            "completed": false
+          },
+          {
+            "id": "item-10",
+            "label": "Connect keyboard, mouse, replay controller and ethernet cable (direct connect to port 4)",
+            "completed": false
+          },
+          {
+            "id": "item-11",
             "label": "Double-check peripheral function",
+            "completed": false
+          },
+          {
+            "id": "item-12",
+            "label": "Place RTS in front of the switch and connect via blue ethernet cable to port 5",
+            "completed": false
+          },
+          {
+            "id": "item-13",
+            "label": "Connect phones via green ethernet cables to ports 10 and 11 on switch",
+            "completed": false
+          },
+          {
+            "id": "item-14",
+            "label": "Connect phone light to port 18.",
+            "completed": false
+          },
+          {
+            "id": "item-15",
+            "label": "Dial both extensions to verify phones and phone light are working",
             "completed": false
           }
         ],
@@ -533,13 +548,13 @@
       },
       {
         "id": "pg-3",
-        "title": "Ports 7-8 (Visitor Radio Brics)",
+        "title": "Ports 7-8 (Visitor Radio Bricks)",
         "subtitle": false,
         "assignedTech": "(unassigned)",
         "items": [
           {
             "id": "item-1",
-            "label": "Provide 3 brics (stats sets up)",
+            "label": "Provide 3 bricks (stats sets up)",
             "completed": false
           },
           {
@@ -571,6 +586,11 @@
             "id": "item-2",
             "label": "Connect to PR laptop via USB",
             "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Gaff both cables down to floor",
+            "completed": false
           }
         ],
         "managerVerified": false,
@@ -584,7 +604,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Power off laptops",
+            "label": "Power off and put away all laptops",
             "completed": false
           },
           {
