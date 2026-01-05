@@ -12,7 +12,7 @@ app.use(express.json());
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://game-day-it-checklist.onrender.com", // your Render frontend URL
+  "https://game-day-checklist-app.onrender.com", // your Render frontend URL
 ];
 
 app.use(
