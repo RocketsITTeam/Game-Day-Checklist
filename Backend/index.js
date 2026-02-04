@@ -203,11 +203,12 @@ app.get("/current-game", (req, res) => {
   }
 });
 
-// Serve static files from React build
+// Serve static files from React build FIRST
 app.use(express.static(path.join(__dirname, "build")));
 
-// Catch-all handler: send back React's index.html for any route not matched above
-app.get("/*", (req, res) => {
+// API routes are already defined above, so any non-API request falls through to this:
+// This sends index.html for all other routes (for React Router)
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
