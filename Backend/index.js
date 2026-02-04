@@ -203,6 +203,14 @@ app.get("/current-game", (req, res) => {
   }
 });
 
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, "build")));
+
+// Catch-all handler: send back React's index.html for any route not matched above
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Backend listening on port ${PORT}`);
