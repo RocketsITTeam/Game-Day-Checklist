@@ -203,15 +203,6 @@ app.get("/current-game", (req, res) => {
   }
 });
 
-// Serve static files from React build FIRST
-app.use(express.static(path.join(__dirname, "build")));
-
-// API routes are already defined above, so any non-API request falls through to this:
-// This sends index.html for all other routes (for React Router)
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Backend listening on port ${PORT}`);
