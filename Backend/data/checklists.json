@@ -744,7 +744,7 @@
             "id": "item-6",
             "label": "On the PR laptop, go to settings and print a test page to verify printer is working properly",
             "completed": false
-          },
+          }
         ],
         "managerVerified": false,
         "verifiedAt": null
