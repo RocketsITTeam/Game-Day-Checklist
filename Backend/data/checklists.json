@@ -50,12 +50,12 @@
             "completed": false
           },
           {
-            "id": "item-5",
+            "id": "item-6",
             "label": "Connect 3 4ft blue Ethernet cables to Cisco switch in ports 6-8",
             "completed": false
           },
           {
-            "id": "item-6",
+            "id": "item-7",
             "label": "Using the fluke or testing laptop, verify connectivity: Away Bench IP - 172.32.x.x",
             "completed": false
           }
@@ -261,20 +261,20 @@
             "completed": false
           },
           {
-            "id": "item-2",
+            "id": "item-3",
             "label": "Scorers Table: 2120 ",
             "completed": false
           },
           {
-            "id": "item-2",
+            "id": "item-4",
             "label": "Traceys Phone: 7503",
             "completed": false
           },
           {
-            "id": "item-2",
+            "id": "item-5",
             "label": "NBA Security: 2167",
             "completed": false
-          },
+          }
           
         ],
         "managerVerified": false,
@@ -303,7 +303,7 @@
           },
           {
             "id": "item-4",
-            "label": "Place grey Cisco switch on floor under 2nd row bench and route cable underneath seat through the troth, and connect to switch port 1",
+            "label": "Place grey Cisco switch on floor under 2nd row bench and route cable underneath seat through the troth",
             "completed": false
           },
           {
@@ -312,12 +312,12 @@
             "completed": false
           },
           {
-            "id": "item-5",
+            "id": "item-6",
             "label": "Connect 3 4ft grey Ethernet cables to Cisco switch in ports 6-8",
             "completed": false
           },
           {
-            "id": "item-6",
+            "id": "item-7",
             "label": "Using the fluke or testing laptop, verify connectivity: Home Bench IP - 172.32.x.x",
             "completed": false
           }
@@ -333,7 +333,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Connect 25ft orange ethernet cord labeled 'trunk' to port port 24 on switch, route it underneath the table and connect it to the dasher wall port labled 'NBA'",
+            "label": "Connect 25ft orange ethernet cord labeled 'trunk' to port port 24 on switch and route it underneath the table to connect it to the dasher wall port labled 'NBA''",
             "completed": false
           }
         ],
@@ -372,8 +372,8 @@
             "completed": false
           },
            {
-            "id": "item-5",
-            "label": "Select Box Score and cumulative to then print a test page."
+            "id": "item-6",
+            "label": "Select Box Score and cumulative to then print a test page.",
             "completed": false
           }
         ],
@@ -665,37 +665,37 @@
             "completed": false
           },
           {
-            "id": "item-11",
+            "id": "item-10",
             "label": "Connect the black power cable and bank to the power strips behind the monitor and power on the replay monitor",
             "completed": false
           },
           {
-            "id": "item-12",
+            "id": "item-11",
             "label": "Connect keyboard, mouse, replay controller and ethernet cable (direct connect to port 4) to the back of the replay monitor.",
             "completed": false
           },
           {
-            "id": "item-13",
+            "id": "item-12",
             "label": "Double-check peripheral function to make sure they works",
             "completed": false
           },
           {
-            "id": "item-14",
+            "id": "item-13",
             "label": "Place RTS in front of the switch and direct connect to port 5 using yellow ethernet cable labeled 'RTS'",
             "completed": false
           },
           {
-            "id": "item-15",
+            "id": "item-14",
             "label": "Connect phones using two 3ft green ethernet cables labled 'phones' to ports 10 and 11 on switch",
             "completed": false
           },
           {
-            "id": "item-16",
+            "id": "item-15",
             "label": "Connect phone light to port 18 using a 3ft white ethernet cable labeled 'phone light'",
             "completed": false
           },
           {
-            "id": "item-17",
+            "id": "item-16",
             "label": "Dial both extensions to verify phones and phone light are working",
             "completed": false
           }
@@ -744,7 +744,6 @@
             "label": "Connect the blue extension cord under bleacher labled 'Printer-EXT to the power strip beneath the bleacher'",
             "completed": false
           },
-          
           {
             "id": "item-2",
             "label": "Connect USB printer Extension cable to the USB port on the back of the PR laptop, run it underneath the chair and connect to printer",
