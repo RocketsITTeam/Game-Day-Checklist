@@ -148,7 +148,8 @@ body {
 }
 
 .checklist-item {
-  margin-bottom: 6px;
+  margin-bottom: 16px;
+  padding: 8px 0;
 }
 
 .checklist-item label {
