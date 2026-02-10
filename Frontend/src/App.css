@@ -147,6 +147,7 @@ body {
   margin: 0 0 12px;
 }
 
+/* spacing between the checklist items inside the drop downs*/
 .checklist-item {
   margin-bottom: 12px;
   padding: 6px 0;
@@ -394,7 +395,7 @@ body {
   color: #111;
   transition: transform 0.2s ease;
 }
-
+/* Spacing between the different drop downs*/
 .task-group {
   margin-bottom: 13px;
 }
