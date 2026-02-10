@@ -41,7 +41,12 @@
           },
           {
             "id": "item-4",
-            "label": "Place grey Cisco switch on floor under 2nd row bench and route cable underneath seat through the troth, and connect to switch port 1",
+            "label": "Place grey Cisco switch on floor under 2nd row bench and route cable underneath seat through the troth",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Connect 'Switch-Away' cable to switch port 1",
             "completed": false
           },
           {
@@ -71,7 +76,7 @@
           },
           {
             "id": "item-2",
-            "label": "Connect visitor phone (check label under phone) using 6ft white ethernet cable",
+            "label": "Connect visitor phone (check label under phone) to patch panel port 2 using 6ft white ethernet cable",
             "completed": false
           },
           {
@@ -111,7 +116,7 @@
           },
           {
             "id": "item-5",
-            "label": "Connect Precision Time USB cable to back of precision time then run underneath table and connect to dasher wall port labeled 'PTS'",
+            "label": "Connect grey Precision Time USB cable to back of precision time then run underneath table and connect to dasher wall port labeled 'PTS'",
             "completed": false
           },
           {
@@ -136,7 +141,7 @@
           },
           {
             "id": "item-2",
-            "label": "On right side of table, directly connect Tracey's laptop to patch panel 23 using a labeled 6ft yellow ethernet cable",
+            "label": "On right side of table (near home bench), directly connect Tracey's laptop to patch panel 23 using a labeled 6ft yellow ethernet cable",
             "completed": false
           },
           {
@@ -145,8 +150,13 @@
             "completed": false
           },
           {
-            "id": "item-6",
-            "label": "**IMPORTANT**: Leave Traceys laptop on the table only if there is a game happening that day. Otherwise place back in the closet bin until game days.",
+            "id": "item-4",
+            "label": "After setup, Launch the NBA stats site on Chrome(website 10.111.24.29).",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "**IMPORTANT**: Leave Traceys laptop on the table only if there is a game happening that day. Otherwise place back in the closet bin until game day.",
             "completed": false
           }
         ],
@@ -191,17 +201,12 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Direct Connect Statistician phone to port 12 (look for labeled ethernet cord) and place to the left of the monitor",
+            "label": "Using 6ft white ethernet cable, direct connect Statistician phone to port 12 and place to the left of the monitor",
             "completed": false
           },
           {
             "id": "item-2",
-            "label": "Direct connect Security phone to port 13 (look for labeled ethernet cord) and place to the right of the monitor",
-            "completed": false
-          },
-          {
-            "id": "item-3",
-            "label": "Direct connect Tracey's phone (look for labeled ethernet cord)",
+            "label": "Using 6ft white ethernet cable, direct connect Security phone to port 13 and place to the right of the monitor",
             "completed": false
           },
           {
@@ -211,7 +216,7 @@
           },
           {
             "id": "item-5",
-            "label": "Connect Tracey's phone to port D020 on the right side of table using 6ft labeled white ethernet cable",
+            "label": "Using 6ft white ethernet cable connect Tracy's phone to port D020 on the right side of table",
             "completed": false
           }
         ],
@@ -220,7 +225,7 @@
       },
       {
         "id": "pg-8",
-        "title": "Tracey's Phone Light || Ports 11-20 (Event's VLAN) || Switch Configuration",
+        "title": "Tracy's Phone Light || Ports 11-20 (Event's VLAN) || Switch Configuration",
         "subtitle": false,
         "assignedTech": "(unassigned)",
         "items": [
@@ -252,9 +257,24 @@
           },
           {
             "id": "item-2",
-            "label": "Visiting Team: 2178; Scorers Table: 2120; Traceys Phone: 7503; NBA Security: 2167",
+            "label": "Visiting Team: 2178",
             "completed": false
-          }
+          },
+          {
+            "id": "item-2",
+            "label": "Scorers Table: 2120 ",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Traceys Phone: 7503",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "NBA Security: 2167",
+            "completed": false
+          },
           
         ],
         "managerVerified": false,
@@ -288,6 +308,11 @@
           },
           {
             "id": "item-5",
+            "label": "Connect 'Switch-Away' cable to switch port 1",
+            "completed": false
+          },
+          {
+            "id": "item-5",
             "label": "Connect 3 4ft grey Ethernet cables to Cisco switch in ports 6-8",
             "completed": false
           },
@@ -317,7 +342,7 @@
       },
       {
         "id": "pg-12",
-        "title": "Tracey's Printer",
+        "title": "Tracy's Printer",
         "subtitle": false,
         "assignedTech": "(unassigned)",
         "items": [
@@ -328,7 +353,7 @@
           },
           {
             "id": "item-2",
-            "label": "Place printer on top of small black table in the closet.",
+            "label": "Retrieve printer and black table from closet and place at the end of the table near Tracy's laptop.",
             "completed": false
           },
           {
@@ -343,12 +368,12 @@
           },
           {
             "id": "item-5",
-            "label": "After setup, Launch the NBA stats site on Chrome(website 10.111.24.29).",
+            "label": "From the NBA Stats site previously launched, click the three bars on the top left and click print", 
             "completed": false
           },
-          {
-            "id": "item-6",
-            "label": "After launch, click the three bars on the top left and click print, select Box Score and cumulative to then print a test page.",
+           {
+            "id": "item-5",
+            "label": "Select Box Score and cumulative to then print a test page."
             "completed": false
           }
         ],
@@ -363,7 +388,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "PLace referee monitor in the am of the table holder. AV will handle the rest.",
+            "label": "Place referee monitor in the arm of the table holder. AV will handle the rest.",
             "completed": false
           }
         ],
@@ -414,12 +439,12 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Place switch under D-VOM riser section",
+            "label": "Place switch under D-VOM riser section 124",
             "completed": false
           },
           {
             "id": "item-2",
-            "label": "Plug in switch for power",
+            "label": "Plug in switch to power on",
             "completed": false
           },
           {
@@ -429,7 +454,7 @@
           },
           {
             "id": "item-4",
-            "label": "Run the cable underneath the bleachers and connect it to the port B on the outlet that is on the back of the pillar behind the bleachers(it will be toward the top) ",
+            "label": "Run the cable underneath the bleachers and connect it to the port B on the outlet that is on the back of the pillar behind the bleachers in 124 (it will be toward the top) ",
             "completed": false
           },
           {
@@ -439,7 +464,7 @@
           },
           {
             "id": "item-6",
-            "label": "Connect blue 4ft. ethernet cables to biscuits",
+            "label": "Connect blue 4ft. ethernet cables to biscuits on tables",
             "completed": false
           },
           {
@@ -490,7 +515,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Verify and take a picture of the game and referee names loaded on the PT screen(front table)",
+            "label": "Verify and take a picture of the game and referee names loaded on the PTS screen(front table)",
             "completed": false
           },
           {
@@ -500,7 +525,7 @@
           },
           {
             "id": "item-3",
-            "label": "Record referee names on the back of the corresponding belt packs using tape and a silver ssharpie",
+            "label": "Record referee names on the back of the corresponding belt packs using tape and a silver sharpie",
             "completed": false
           },
           {
@@ -515,12 +540,12 @@
           },
           {
             "id": "item-6",
-            "label": "Confirm battery levels are fully green, by going down to the PTS and checking on screen 2 hours before the game starts",
+            "label": "Confirm battery levels are fully green by going down to the PTS and checking on screen 2 hours before the game starts",
             "completed": false
           },
           {
             "id": "item-7",
-            "label": "Double check that power is on and deliver to referees/officers outside Officials room in D-VOM 90 minutes before the game. The extra pack stays at the D-VOM table",
+            "label": "Double check that power is on and deliver to referees/officers outside officials room in D-VOM 90 minutes before the game. The extra pack stays at the D-VOM table",
             "completed": false
           }
         ],
@@ -576,7 +601,7 @@
           },
           {
             "id": "item-2",
-            "label": "Place switch on top of table.",
+            "label": "Place switch on top of table and connect to power.",
             "completed": false
           },
           {
@@ -631,12 +656,12 @@
           },
           {
             "id": "item-8",
-            "label": "Connect black cable labled 'clock' to the usb port on the back of the Primary LT Ethernet via USB to ethernet adapter",
+            "label": "Connect black cable labled 'clock' to the usb port on the back of the Primary LT ethernet via USB to ethernet adapter",
             "completed": false
           },
           {
             "id": "item-9",
-            "label": "Place Replay monitor on table to the left of the switch",
+            "label": "Place replay monitor on table to the left of the switch",
             "completed": false
           },
           {
@@ -651,12 +676,12 @@
           },
           {
             "id": "item-13",
-            "label": "Double-check peripheral function to make sure it works",
+            "label": "Double-check peripheral function to make sure they works",
             "completed": false
           },
           {
             "id": "item-14",
-            "label": "Place RTS in front of the switch and direct connect to port 5 yellow ethernet cable labeled 'RTS'",
+            "label": "Place RTS in front of the switch and direct connect to port 5 using yellow ethernet cable labeled 'RTS'",
             "completed": false
           },
           {
@@ -716,7 +741,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Connect the blue extension cord under bleacher(extension cord) labled 'Printer-EXT to the power strip beneath the bleacher'",
+            "label": "Connect the blue extension cord under bleacher labled 'Printer-EXT to the power strip beneath the bleacher'",
             "completed": false
           },
           
@@ -737,7 +762,7 @@
           },
           {
             "id": "item-5",
-            "label": "Provide a box of toner (850) and a pack of paper and place it on the counter behind the printer'",
+            "label": "Provide a box of toner (850) and a pack of paper and place it on the counter behind the printer",
             "completed": false
           },
           {
@@ -793,7 +818,7 @@
           },
           {
             "id": "item-2",
-            "label": "leave 4 biscuits to the right of table in section 108 free for social media ethernet cables (they will provide their own cables).",
+            "label": "Leave 4 biscuits to the right of table in section 108 free for social media ethernet cables (they will provide their own cables).",
             "completed": false
           },
           {
