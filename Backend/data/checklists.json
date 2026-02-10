@@ -424,17 +424,17 @@
           },
           {
             "id": "item-3",
-            "label": "Connect trunk to port 38 on switch (using purple cable labeled 'D-VOM' from the closet)",
+            "label": "Connect the purple trunk cable to port 16 on switch (using purple cable labeled 'D-VOM' from the closet)",
             "completed": false
           },
           {
             "id": "item-4",
-            "label": "Using purple cable from closet, connect one end of cord to the port on the piller underneath bleachers.",
+            "label": "Run the cable underneath the bleachers and connect it to the port B on the outlet that is on the back of the pillar behind the bleachers(it will be toward the top) ",
             "completed": false
           },
           {
             "id": "item-5",
-            "label": "Run the labeled extended biscuit cables down from the tables and secure them. ",
+            "label": "Run the labeled extended biscuit cables down the sides of the tables and secure them. ",
             "completed": false
           },
           {
@@ -515,7 +515,7 @@
           },
           {
             "id": "item-6",
-            "label": "Confirm battery levels are fully green",
+            "label": "Confirm battery levels are fully green, by going down to the PTS and checking on screen 2 hours before the game starts",
             "completed": false
           },
           {
@@ -581,7 +581,7 @@
           },
           {
             "id": "item-3",
-            "label": "Connect switch to trunk port 16 under bleacher using blue Ethernet cable labeled 'trunk'(under bleacher)",
+            "label": "Connect blue Ethernet cable labeled 'trunk'(stored under bleacher) to the trunk switch port 16.",
             "completed": false
           }
         ],
@@ -631,7 +631,7 @@
           },
           {
             "id": "item-8",
-            "label": "Connect black cable labled 'clock' to the Primary LT Ethernet via USB adapter",
+            "label": "Connect black cable labled 'clock' to the usb port on the back of the Primary LT Ethernet via USB to ethernet adapter",
             "completed": false
           },
           {
@@ -656,7 +656,7 @@
           },
           {
             "id": "item-14",
-            "label": "Place RTS to the right of the switch and direct connect to port 5 yellow ethernet cable labeled 'RTS'",
+            "label": "Place RTS in front of the switch and direct connect to port 5 yellow ethernet cable labeled 'RTS'",
             "completed": false
           },
           {
@@ -691,17 +691,17 @@
           },
           {
             "id": "item-2",
-            "label": "Run 1 black Ethernet cord labeled 'bricks' to far end of tables to the left.",
+            "label": "Run 1 black 25ft ethernet cord labeled 'bricks' to far end of tables to the left.",
             "completed": false
           },
           {
             "id": "item-3",
-            "label": "Run 1 blue ethernet cord labeled 'bricks' to far end of tables to the left.",
+            "label": "Run 1 blue 25ft ethernet cord labeled 'bricks' to far end of tables to the left.",
             "completed": false
           },
           {
             "id": "item-4",
-            "label": "Run 1 blue ethernet cord labeled 'bricks' to be placed directly to the left of the replay monitor.",
+            "label": "Run 1 blue 15ft ethernet cord labeled to be placed directly to the left of the replay monitor.",
             "completed": false
           }
         ],
@@ -716,18 +716,18 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Connect the blue power strip under bleacher(extension cord) labled 'Printer-EXT'",
+            "label": "Connect the blue extension cord under bleacher(extension cord) labled 'Printer-EXT to the power strip beneath the bleacher'",
             "completed": false
           },
           
           {
             "id": "item-2",
-            "label": "Connect USB printer Extension cable to the back of the PR laptop and connect to printer",
+            "label": "Connect USB printer Extension cable to the USB port on the back of the PR laptop, run it underneath the chair and connect to printer",
             "completed": false
           },
           {
             "id": "item-3",
-            "label": "Run both the blue power cord and the printer extenstion cord underneath the table and/or chair",
+            "label": "Run the blue extension cord underneath the chair",
             "completed": false
           },
           {
@@ -737,7 +737,7 @@
           },
           {
             "id": "item-5",
-            "label": "Provide a box of toner and a pack of paper and place it on the counter behind the printer'",
+            "label": "Provide a box of toner (850) and a pack of paper and place it on the counter behind the printer'",
             "completed": false
           },
           {
@@ -793,7 +793,7 @@
           },
           {
             "id": "item-2",
-            "label": "leave 4 /biscuits to the right of table in section 108 free for social media ethernet cables (they will plug them in).",
+            "label": "leave 4 biscuits to the right of table in section 108 free for social media ethernet cables (they will provide their own cables).",
             "completed": false
           },
           {
@@ -813,7 +813,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Collect all cables at the end of the game",
+            "label": "Collect all pink cables at the end of the game",
             "completed": false
           }
         ],
