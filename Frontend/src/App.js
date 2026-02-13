@@ -491,7 +491,7 @@ const saveAdminEditor = async () => {
     if (!adminPass) return;
 
     try {
-      const res = await fetch(`${API_BASE_URL}/checklists`, {
+      const res = await fetch(`${API_BASE_URL}/checklists/${activeTab}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -534,7 +534,7 @@ const saveAdminEditor = async () => {
   useEffect(() => {
     async function loadChecklists() {
       try {
-        const res = await fetch(`${API_BASE_URL}/checklists`);
+        const res = await fetch(`${API_BASE_URL}/${activeTab}`);
         if (!res.ok) throw new Error("HTTP " + res.status);
         const data = await res.json();
         setSections(data);
@@ -548,7 +548,7 @@ const saveAdminEditor = async () => {
       }
     }
     loadChecklists();
-  }, []);
+  }, [activeTab]);
 
   useEffect(() => {
     async function loadCurrentGame() {
