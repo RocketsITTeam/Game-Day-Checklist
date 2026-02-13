@@ -431,29 +431,35 @@ body {
 /* Tabs */
 .tabs {
   display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 0;
+  padding: 0 8px;
 }
 
 .tab {
-  padding: 10px 20px;
-  border-radius: 999px;
+  padding: 12px 24px;
+  border-radius: 8px 8px 0 0;
   border: 1px solid #4b5563;
-  background: transparent;
-  color: #e5e7eb;
-  font-size: 0.9rem;
+  border-bottom: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: #9ca3af;
+  font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
+  margin-right: 4px;
+  position: relative;
+  bottom: -1px;
 }
 
 .tab:hover {
   background: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb;
 }
 
 .tab.active {
-  background: #be0000;
-  border-color: #be0000;
-  color: #ffffff;
+  background: #ffffff;
+  border-color: #4b5563;
+  border-bottom: 1px solid #ffffff;
+  color: #000000;
   font-weight: 600;
 }
