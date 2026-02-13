@@ -12,7 +12,7 @@ app.use(express.json());
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://game-day-checklist-app.onrender.com", // your Render frontend URL
+  "https://rockets-game-day-checklist-frontend.onrender.com", // your Render frontend URL
 ];
 
 app.use(
@@ -201,6 +201,13 @@ app.get("/current-game", (req, res) => {
     console.error("Error reading games CSV:", err);
     res.status(500).json({ error: "Failed to load game schedule" });
   }
+});
+  // Serve static files from React build
+app.use(express.static(path.join(__dirname, "build")));
+
+// Catch-all handler: send back React's index.html for any route not matched above
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 const PORT = process.env.PORT || 4000;
