@@ -57,6 +57,7 @@ const initialSections = {
   },
 };
 
+
 function getGameKey(game) {
   if (!game?.date || !game?.opponent) return null;
   return `${game.date}__${game.opponent}`;
@@ -467,6 +468,7 @@ function App() {
   const [adminEditorOpen, setAdminEditorOpen] = useState(false);
   const [adminRawJson, setAdminRawJson] = useState("");
   const [adminSaveStatus, setAdminSaveStatus] = useState("");
+  const [activeTab, setActiveTab] = useState("setup-full"); 
 
   const openAdminEditor = () => {
   setAdminRawJson(JSON.stringify(sections, null, 2));
@@ -842,13 +844,40 @@ function sectionIsVisibleForRole(sectionKey, sectionObj) {
 
       </header>
 
+      <div className="tabs">
+        <button
+          className={activeTab === "setup-full" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("setup-full")}
+        >
+          Full Setup
+        </button>
+        <button
+          className={activeTab === "setup-partial" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("setup-partial")}
+        >
+          Partial Setup
+        </button>
+        <button
+          className={activeTab === "breakdown-full" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("breakdown-full")}
+        >
+          Full Breakdown
+        </button>
+        <button
+          className={activeTab === "breakdown-partial" ? "tab active" : "tab"}
+          onClick={() => setActiveTab("breakdown-partial")}
+        >
+          Partial Breakdown
+        </button>
+      </div>
+
       <main>
         <Section
           sectionKey="preGame"
           section={sections?.preGame ?? initialSections.preGame}
           canVerify={canVerify}
           isAdmin={isAdmin}
-          visible={true}
+          visible={activeTab === "setup-full"}
           onToggleItem={handleToggleItem}
           onToggleManagerVerified={handleToggleManagerVerified}
           onAdminEdit={isAdmin ? handleAdminEdit : undefined}
@@ -860,7 +889,7 @@ function sectionIsVisibleForRole(sectionKey, sectionObj) {
           section={sections?.DVOM ?? initialSections.DVOM}
           canVerify={canVerify}
           isAdmin={isAdmin}
-          visible={true}
+          visible={activeTab === "setup-full"}
           onToggleItem={handleToggleItem}
           onToggleManagerVerified={handleToggleManagerVerified}
           onAdminEdit={isAdmin ? handleAdminEdit : undefined}
@@ -873,7 +902,7 @@ function sectionIsVisibleForRole(sectionKey, sectionObj) {
           section={sections?.RefPacks ?? initialSections.RefPacks}
           canVerify={canVerify}
           isAdmin={isAdmin}
-          visible={true}
+          visible={activeTab === "setup-full"}
           onToggleItem={handleToggleItem}
           onToggleManagerVerified={handleToggleManagerVerified}
           onAdminEdit={isAdmin ? handleAdminEdit : undefined}
@@ -886,7 +915,7 @@ function sectionIsVisibleForRole(sectionKey, sectionObj) {
           section={sections?.EastClub ?? initialSections.EastClub}
           canVerify={canVerify}
           isAdmin={isAdmin}
-          visible={true}
+          visible={activeTab === "setup-full"}
           onToggleItem={handleToggleItem}
           onToggleManagerVerified={handleToggleManagerVerified}
           onAdminEdit={isAdmin ? handleAdminEdit : undefined}
@@ -899,7 +928,7 @@ function sectionIsVisibleForRole(sectionKey, sectionObj) {
           section={sections?.WestClub ?? initialSections.WestClub}
           canVerify={canVerify}
           isAdmin={isAdmin}
-          visible={true}
+          visible={activeTab === "setup-full"}
           onToggleItem={handleToggleItem}
           onToggleManagerVerified={handleToggleManagerVerified}
           onAdminEdit={isAdmin ? handleAdminEdit : undefined}
