@@ -147,7 +147,7 @@ body {
   margin: 0 0 12px;
 }
 
-/* spacing between the checklist items inside the drop downs*/
+/*spacing between the checklist items inside the drop downs*/
 .checklist-item {
   margin-bottom: 12px;
   padding: 6px 0;
@@ -395,7 +395,8 @@ body {
   color: #111;
   transition: transform 0.2s ease;
 }
-/* Spacing between the different drop downs*/
+
+/* Spacing between groups */
 .task-group {
   margin-bottom: 13px;
 }
@@ -426,4 +427,33 @@ body {
 .task-progress {
   margin-left: auto;
   text-align: right;
+}
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tab.active {
+  background: #be0000;
+  border-color: #be0000;
+  color: #ffffff;
+  font-weight: 600;
 }
