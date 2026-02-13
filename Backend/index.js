@@ -3,7 +3,12 @@ const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
 const { parse } = require("csv-parse/sync");
-const checklistsPath = path.join(__dirname, "data", "checklists.json");
+const checklistPaths = {
+  "full-setup": path.join(__dirname, "data", "checklists-full-setup.json"),
+  "partial-setup": path.join(__dirname, "data", "checklists-partial-setup.json"),
+  "full-breakdown": path.join(__dirname, "data", "checklists-full-breakdown.json"),
+  "partial-breakdown": path.join(__dirname, "data", "checklists-partial-breakdown.json"),
+};
 require("dotenv").config();
 
 const app = express();
@@ -49,33 +54,36 @@ app.post("/auth/login", (req, res) => {
   return res.status(401).json({ error: "Invalid password" });
 });
 
-// Get checklist definitions (private instructions)
-app.get("/checklists", (req, res) => {
+// Get checklists by tab (private instructions for each tab)
+app.get("/checklists/:tab", (req, res) => {
+  const filePath = checklistPaths[req.params.tab];
+  if (!filePath) return res.status(404).json({ error: "Unknown tab" });
   try {
-    const json = fs.readFileSync(checklistsPath, "utf-8");
-    const data = JSON.parse(json);
-    res.json(data);
+    const json = fs.readFileSync(filePath, "utf-8");
+    res.json(JSON.parse(json));
   } catch (err) {
-    console.error("Error reading checklists.json:", err);
+    console.error("Error reading checklist file:", err);
     res.status(500).json({ error: "Failed to load checklists" });
   }
 });
-app.put("/checklists", (req, res) => {
+
+// Save checklists by tab (admin only)
+app.put("/checklists/:tab", (req, res) => {
   const adminKey = req.headers["x-admin-password"];
-    if (adminKey !== process.env.ADMIN_PASSWORD) {
-      return res.status(403).json({ error: "Forbidden" });
-    }
-
-    try {
-      const newData = req.body;
-      if (!newData) return res.status(400).json({ error: "Missing body" });
-
-      fs.writeFileSync(checklistsPath, JSON.stringify(newData, null, 2));
-      res.json({ ok: true });
-    } catch (err) {
-      console.error("Error writing checklists.json:", err);
-      res.status(500).json({ error: "Failed to save checklists" });
-    }
+  if (adminKey !== process.env.ADMIN_PASSWORD) {
+    return res.status(403).json({ error: "Forbidden" });
+  }
+  const filePath = checklistPaths[req.params.tab];
+  if (!filePath) return res.status(404).json({ error: "Unknown tab" });
+  try {
+    const newData = req.body;
+    if (!newData) return res.status(400).json({ error: "Missing body" });
+    fs.writeFileSync(filePath, JSON.stringify(newData, null, 2));
+    res.json({ ok: true });
+  } catch (err) {
+    console.error("Error writing checklist file:", err);
+    res.status(500).json({ error: "Failed to save checklists" });
+  }
 });
 
 
@@ -202,6 +210,7 @@ app.get("/current-game", (req, res) => {
     res.status(500).json({ error: "Failed to load game schedule" });
   }
 });
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Backend listening on port ${PORT}`);
