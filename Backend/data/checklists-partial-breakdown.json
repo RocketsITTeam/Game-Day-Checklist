@@ -1,0 +1,146 @@
+{
+  "preGame": {
+    "name": "FRONT TABLE/ BENCHES",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Tracey's Laptop",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect Tracey's Laptop from ethernet connection.",
+            "completed": true
+          },
+          {
+            "id": "item-2",
+            "label": "Place laptop, charger and ethernet dongle in 'FRONT TABLE' bin in closet.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "RefPacks": {
+    "name": "REFEREE PACKS CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Referee Pack Collections",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Retrieve referee packs from referees at the end of the game.",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Remove tape and/or sticky note with referee names from the back of the referee pack.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Turn all referee packs off using the switch on the side",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Place all referee packs in black bin in office.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "EastClub": {
+    "name": "EAST CLUB CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "verify that equipment is set up on the second table from right ONLY (when facing the court).",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Stats Laptops || Ports 1-6 || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Power off all laptops (Secondary, Primary, and PR)",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect all laptop chargers from UPS and laptops",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Disconnect ethernet cables from all three laptops",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Place laptops in bin inside closet",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Place NGSS plaque in closet.",
+            "completed": false
+          },
+          {
+            "id": "item-7",
+            "label": "Place box of toner (850) and pack of paperon top of printer container and bring container back to closet",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "WestClub": {
+    "name": "WEST CLUB CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify that request forms for the 6ft Pink Ethernet cables are in all of the corresponding sections",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  }
+}
