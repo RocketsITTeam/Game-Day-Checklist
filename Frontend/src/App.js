@@ -889,7 +889,7 @@ function sectionIsVisibleForRole(sectionKey, sectionObj) {
           section={sections?.DVOM ?? initialSections.DVOM}
           canVerify={canVerify}
           isAdmin={isAdmin}
-          visible={activeTab === "full-setup" || activeTab === "partial-setup" || activeTab === "full-breakdown" || activeTab === "partial-breakdown"}
+          visible={activeTab === "full-setup" || activeTab === "partial-setup" || activeTab === "full-breakdown"}
           onToggleItem={handleToggleItem}
           onToggleManagerVerified={handleToggleManagerVerified}
           onAdminEdit={isAdmin ? handleAdminEdit : undefined}
