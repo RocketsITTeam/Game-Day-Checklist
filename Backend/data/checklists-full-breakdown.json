@@ -1,0 +1,598 @@
+{
+  "preGame": {
+    "name": "FRONT TABLE/ BENCHES",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Table Connection",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect patch cables under tabletop for away and home sides of the table. Leave them under the table top",
+            "completed": true
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Away Bench Connection || Ports 1-2 (Events VLAN) || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Leave the purple jumper cables connected to switch.",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect long black cable labeled 'Switch-Away' to patch port 1 (left end of table) for away bench connection",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Re-coil the 'Switch-Away' cable from under bench seats next to scorers table",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Pick up grey Cisco switch on floor under 2nd row bench and un-route the cable from underneath seat through the troth",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Disconnect 'Switch-Away' cable to switch port 1 and place in the 'FRONT TABLE' bin.",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Disconnect 3 4ft blue Ethernet cables to Cisco switch in ports 6-8 and place in bin.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-3",
+        "title": "Away Phone|| Ports 1-2 (Event's VLAN) || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-2",
+            "label": "Disconnect visitor phone (check label under phone) from patch panel port 2 with 6ft white ethernet cable.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Place phone on the cart",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-4",
+        "title": "Tissot and Precision Time Whistle System (PTS) || Ports 3-10 (NBA VLAN) || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect Precisicion Time (PTS) and place on cart.",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Place blue 4ft ethernet cable from Port 4 on switch in the bin after disconnecting.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Disconnect black VGA cable from the back of the PTS and from the corresponding connection on the back of Tissot machine and place in bin.",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Disconnect brown XLR cable from the back of the PTS system and from the back of the Tissot machine and place in bin",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Disconnect grey Precision Time USB cable from the back of the precision time and from the dasher wall port labeled 'PTS', then place in bin. ",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Disconnect power cable from the Precision Time from the UPS battery and place in bin.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-5",
+        "title": "Tracey's Laptop || Ports 3-10 (NBA VLAN) || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "On right side of table (near home bench), directly the labeled 6ft yellow ethernet cable from the patch panel and place in bin. Keep ethernet dongle connected",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Place the black laptop charger in the bin after disconnecting from tracey's laptop.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-6",
+        "title": "Sound Meter || Ports 11-20 (Event's VLAN) || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect the sound meters black ethernet cable from Port 11 on switch",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect mic and mic cover from the mic stand in front of switch. ",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Unplug the power cord from table outlet and place all back into the carrying case. ",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Place carrying case on the cart after all cords and mic covers have been placed back inside.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-7",
+        "title": "Phones || Ports 11-20 (Event's VLAN) || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect Statistician phone from port 12 and place, with white ethernet cord still connected, back on cart",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect Security phone from port 13 and place, with white ethernet cord still connected, back on cart",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Disconnect Tracey's phone from port D020 and place, with white ethernet cord still connected, back on cart",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-8",
+        "title": "Tracey's Phone Light || Ports 11-20 (Event's VLAN) || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disonnect Tracey's phone light from port D021 on the right side of table, keeping 6ft labeled white ethernet cable conected.",
+            "completed": false
+          },
+          {
+            "id": "item-1",
+            "label": "Place phone light, with cord, in the bin. ",
+            "completed": false
+          }
+          
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-10",
+        "title": "Home Bench || Ports 21-22 (BBOPS's VLAN) || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect long black cable labeled 'Switch-Home' from port 21 on right end of table.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Re-coil the 'Switch-Home' cable from under bench seats and place in bin.",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Collect grey Cisco switch on floor under 2nd row bench along with 3 4ft labeled grey ethernet cables and place in bin.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-11",
+        "title": "Trunk Ports || Ports 23-24 || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect 25ft orange ethernet cord labeled 'trunk' to from port 24 on switch and route it underneath the table",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Recoil cable and place in bin.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-12",
+        "title": "Tracey's Printer",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Unplug printer power cable from outlet on table and USB from computer.",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Place power and USB cable on top of printer and take printer to the closet",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Retrieve pack of paper and extra box of toner (850) and place back in the closet.",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Place Tracey's black table back in closet.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-13",
+        "title": "NBA Equipment",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Retreieve referee monitor from the arm of the table holder and place on top of bins on cart.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "DVOM": {
+    "name": "D-VOM MEDIA CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "DVOM Breakdown",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect switch and power cord from under D-VOM riser section 124",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect the purple trunk cable from port 16 on switch and from port B(D48) on the outlet behind the bleachers in 124 (it will be toward the top) ",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Re-coil the cable and place in the 'DVOM' bin",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Disconnect all labeled extended biscuit cables from switch and recoil. ",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Disconnect blue 4ft. ethernet cables from biscuits on tables",
+            "completed": false
+          },
+          {
+            "id": "item-7",
+            "label": "Place all coiled cords and ethernet cables in DVOM bin on cart.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "RefPacks": {
+    "name": "REFEREE PACKS CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Referee Pack Collections",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Retrieve referee packs from referees at the end of the game.",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Remove tape and/or sticky note with referee names from the back of the referee pack.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Turn all referee packs off using the switch on the side",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Place all referee packs in black bin in office.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "EastClub": {
+    "name": "EAST CLUB CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "retrieve switch from on top of table, disconnect from power, and place on cart.",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect blue Ethernet cable labeled 'trunk'(stored under bleacher) from the trunk switch port 16.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Stats Laptops || Ports 1-6 || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Power off all laptops (Secondary, Primary, and PR)",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect all laptop chargers from UPS and laptops",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Disconnect black 'clock' cable from Primary laptop USB port",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Disconnect ethernet cables from all three laptops (ports 1, 2, 3) and place in clear bin on cart",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Place laptops in bin in proper order",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Power off replay monitor and place in beige container",
+            "completed": false
+          },
+          {
+            "id": "item-7",
+            "label": "Disconnect keyboard, mouse, replay controller, and ethernet cable from replay monitor and place in container.",
+            "completed": false
+          },
+          {
+            "id": "item-8",
+            "label": "Disconnect power cable from replay monitor and place monitor along with power cable in beige container",
+            "completed": false
+          },
+          {
+            "id": "item-9",
+            "label": "Disconnect blue RTS ethernet cable from port 5 and place RTS on cart",
+            "completed": false
+          },
+          {
+            "id": "item-10",
+            "label": "Disconnect phone ethernet cables from ports 10 and 11 and place phones on cart.",
+            "completed": false
+          },
+          {
+            "id": "item-11",
+            "label": "Disconnect phone light cable from port 18 and place light on cart.",
+            "completed": false
+          },
+          {
+            "id": "item-12",
+            "label": "Coil and and place all ethernet cables in clear bin.",
+            "completed": false
+          },
+          {
+            "id": "item-13",
+            "label": "Unplug and place UPS on cart",
+            "completed": false
+          },
+          {
+            "id": "item-14",
+            "label": "Return all equipment to MC Quad D Closet on cart",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Place NGSS plaque in closet.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-3",
+        "title": "Ports 7-8 (Visitor Radio Bricks)",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Retrieve 3 bricks (stats sets up) and 2 power cords from tables to the left and place on cart",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Retrieve 1 black 25ft ethernet cord labeled 'bricks' from far end of tables to the left and place in clear bin.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Retrieve 1 blue 25ft ethernet cord labeled 'bricks' from far end of tables to the left and place in clear bin.",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Retrieve 1 blue 15ft ethernet cord from left side of of the replay monitor and place in clear bin.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-4",
+        "title": "Printer",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Disconnect the blue extension cord labled 'Printer-EXT from the printer power source and place back underneath bleacher.",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Disconnect USB printer Extension cable from the USB port on the back of the PR laptop, re-coil it from underneath the chair and place in printer container.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Coil and place printer and power cable in printer container ",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Place box of toner (850) and pack of paperon top of printer container and bring container back to closet",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Make sure all ethernet lines are in the clear container, and equipment is back on cart, and bring cart back to MC quad D closet. ",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "WestClub": {
+    "name": "WEST CLUB CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Collect all pink ethernet cords from table.",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Collect all ethernet request signs .",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Place request forms and pink ethernet cables back in bin inside MC Quad E closet.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  }
+}
