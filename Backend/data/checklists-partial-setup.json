@@ -1,0 +1,430 @@
+{
+  "preGame": {
+    "name": "FRONT TABLE/ BENCHES",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Table Connection",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify Patch cables under tabletop are connected to matching cables for away and home sides of the table",
+            "completed": true
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Patch Connections",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify Patch cables are still connected to the switch and are connected to the correct patch connections. ",
+            "completed": true
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-3",
+        "title": "Tracy's Laptop",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Connect Tracy's Laptop to yellow ethernet connection and her charger to power on the home side of the table.",
+            "completed": true
+          },
+          {
+            "id": "item-2",
+            "label": "After setup, Launch the NBA stats site on Chrome(website 10.111.24.29).",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "**IMPORTANT**: Leave Traceys laptop on the table only if there is a game happening that day. Otherwise place back in the closet bin until game day.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-4",
+        "title": "Tracy's Printer",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify that the printer power cable is plugged directly into an outlet on table",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Provide pack of paper and extra box of toner (850) and place on the tables bottom shelf.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Connect printer to laptop using grey USB cable.",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "From the NBA Stats site previously launched, click the three bars on the top left and click print", 
+            "completed": false
+          },
+           {
+            "id": "item-5",
+            "label": "Select Box Score and cumulative to then print a test page.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "DVOM": {
+    "name": "D-VOM MEDIA CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify switch is placed under D-VOM riser section 124",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Check connections at each table to make sure they go out to the internet.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "RefPacks": {
+    "name": "REFEREE PACKS CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist || Deliver belt packs ~ 90 minutes before tip-off",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify and take a picture of the game and referee names loaded on the PTS screen(front table)",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Using the picture, gather the corresponding referee packs from the bin in the IT office and replace the batteries. ALWAYS include an extra pack with fresh batteries in case of emergencies.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Record referee names on the back of the corresponding belt packs using tape and a silver sharpie",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Verify that there are two clips connected for each pack",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Power on all belt packs",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Confirm battery levels are fully green by going down to the PTS and checking on screen 2 hours before the game starts",
+            "completed": false
+          },
+          {
+            "id": "item-7",
+            "label": "Double check that power is on and deliver to referees/officers outside officials room in D-VOM 90 minutes before the game. The extra pack stays at the D-VOM table",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "EastClub": {
+    "name": "EAST CLUB CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify that equipment is set up on the second table from right ONLY (when facing the court).",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Stats Laptops || Ports 1-6 || Switch Configuration",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Place laptops on table in this specific order from left to right: Secondary, Primary and PR",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Using cables that have been ziptied (2 white cables and one green) verify connection to switch ports 1, 2, and 3",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Connect black cable labled 'clock' to the USB port on the back of the Primary LT ethernet via USB to ethernet adapter",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Connect black printer USB cable to the USB port on the back of the PR LT",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Dial both extensions to verify phones and phone light are working",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-3",
+        "title": "Ports 7-8 (Visitor Radio Bricks)",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Provide 3 bricks (stats sets up) and 2 power cords to the furthest left table",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-4",
+        "title": "Printer",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Provide a box of toner (850) and a pack of paper and place it on the counter behind the printer",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "On the PR laptop, go to settings and print a test page to verify printer is working properly",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "WestClub": {
+    "name": "WEST CLUB CHECKLIST",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Setup Checklist",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Place request forms for the 6ft Pink Ethernet cables in all of the corresponding sections",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
+  "bbOps": {
+    "name": "BBOPS CHECKLIST",
+    "techName": "(manager only)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "Test",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Call 201-974-6917 for system test",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Test game clock, stats radio and headset",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "label chanel for stats radio",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Print sample stats page",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Complete NBA Form linked on physical instructions",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-2",
+        "title": "Media Workroom",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify Every Cubicle is on EVENT VLAN with internet connection",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Verify Netgear switch is powered on and connected to EVENT VLAN",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-3",
+        "title": "Game Night Office",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify stats computer is connected to NBA VLAN",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Verify phone is powered on and has a dial tone",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Verify stats phone is connected to NBA VLAN",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-4",
+        "title": "Trucks (ADHOC)",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify trucks have internet and stats feeds",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-5",
+        "title": "R2D2 (ADHOC) || Location: Star 5 Dressing room",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify power and network connectivity",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "pg-6",
+        "title": "Press Conference (ADHOC) || SETUP CHECKLIST",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Setup Zoom Carts",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Hang NBA backdrop",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Setup extra monitor, keyboard, microphone, mic stand, and mouse on table",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ],
+    "managerVerified": false,
+    "verifiedAt": null
+  }
+}
