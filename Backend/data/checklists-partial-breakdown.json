@@ -12,7 +12,7 @@
           {
             "id": "item-1",
             "label": "Disconnect Tracey's Laptop from ethernet connection.",
-            "completed": true
+            "completed": false
           },
           {
             "id": "item-2",
