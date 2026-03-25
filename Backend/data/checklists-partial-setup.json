@@ -12,7 +12,7 @@
           {
             "id": "item-1",
             "label": "Verify Patch cables under tabletop are connected to matching cables for away and home sides of the table",
-            "completed": true
+            "completed": false
           }
         ],
         "managerVerified": false,
@@ -27,7 +27,7 @@
           {
             "id": "item-1",
             "label": "Verify Patch cables are still connected to the switch and are connected to the correct patch connections. ",
-            "completed": true
+            "completed": false
           }
         ],
         "managerVerified": false,
@@ -42,7 +42,7 @@
           {
             "id": "item-1",
             "label": "Connect Tracy's Laptop to yellow ethernet connection and her charger to power on the home side of the table.",
-            "completed": true
+            "completed": false
           },
           {
             "id": "item-2",
