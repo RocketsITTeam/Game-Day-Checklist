@@ -573,7 +573,7 @@ const saveAdminEditor = async () => {
     const key = getGameKey(currentGame);
     if (!key) return;
 
-    const stored = localStorage.getItem(`sections_${key}`);
+    const stored = localStorage.getItem(`sections_${key}_${activeTab}`);
     if (stored) {
       try {
         const saved = JSON.parse(stored);
@@ -592,7 +592,7 @@ const saveAdminEditor = async () => {
     const key = getGameKey(currentGame);
     if (!key) return;
 
-    localStorage.setItem(`sections_${key}`, JSON.stringify(sections));
+    localStorage.setItem(`sections_${key}_${activeTab}`, JSON.stringify(sections));
   }, [sections, currentGame, hydrated]);
 
   const handleToggleItem = (sectionKey, itemId, taskId = null) => {
