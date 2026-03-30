@@ -341,37 +341,38 @@ function Section({
                         </li>
                       ))}
                     </ul>
-
-                    <div className="manager-verification">
-                      {canVerify && (
-                        <label>
-                          <input
-                            type="checkbox"
-                            disabled={!taskAllDone}
-                            checked={!!task.managerVerified}
-                            onChange={() => {
-                              if (taskAllDone) onToggleManagerVerified(sectionKey, task.id);
-                            }}
-                          />
-                          <span>
-                            Manager verification
-                            {!taskAllDone &&
-                              " (available when all items are completed)"}
-                          </span>
-                        </label>
-                      )}
-
-                      <div className="manager-timestamp">
-                        {task.managerVerified && task.verifiedAt
-                          ? `Verified by manager at: ${task.verifiedAt}`
-                          : "Awaiting manager verification"}
-                      </div>
-                    </div>
                   </details>
                 );
               })}
             </div>
           )}
+            {/* ADD THIS NEW SECTION-LEVEL MANAGER VERIFICATION */}
+          {hasTasks && (
+            <div className="manager-verification">
+              {canVerify && (
+                <label>
+                  <input
+                    type="checkbox"
+                    disabled={total === 0 || completedCount !== total}
+                    checked={!!section.managerVerified}
+                    onChange={() => onToggleManagerVerified(sectionKey)}
+                  />
+                  <span>
+                    Manager verification for entire section
+                    {!(total > 0 && completedCount === total) &&
+                      " (available when all items are completed)"}
+                  </span>
+                </label>
+              )}
+
+              <div className="manager-timestamp">
+                {section.managerVerified && section.verifiedAt
+                  ? `Verified by manager at: ${section.verifiedAt}`
+                  : "Awaiting manager verification"}
+              </div>
+            </div>
+          )}
+                
         </div>
       )}
     </div>
