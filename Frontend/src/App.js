@@ -365,13 +365,14 @@ function Section({
                 </label>
               )}
 
+              {/* This shows to EVERYONE including Techs */}
               <div className="manager-timestamp">
                 {section.managerVerified && section.verifiedAt
                   ? `Verified by manager at: ${section.verifiedAt}`
                   : "Awaiting manager verification"}
               </div>
             </div>
-          )}
+            )}
                 
         </div>
       )}
@@ -469,7 +470,7 @@ function App() {
   const [adminEditorOpen, setAdminEditorOpen] = useState(false);
   const [adminRawJson, setAdminRawJson] = useState("");
   const [adminSaveStatus, setAdminSaveStatus] = useState("");
-  const [activeTab, setActiveTab] = useState("setup-full"); 
+  const [activeTab, setActiveTab] = useState("full-setup"); 
 
   const openAdminEditor = () => {
   setAdminRawJson(JSON.stringify(sections, null, 2));
