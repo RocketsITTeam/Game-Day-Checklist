@@ -188,7 +188,14 @@ function Section({
         type="button"
       >
         <div>
-          <div className="section-title">{section.name}</div>
+          <div className="section-title">
+            {section.name}
+            {hasTasks && (
+              <span style={{ marginLeft: '16px', fontSize: '0.85rem', fontWeight: 'normal' }}>
+                • Assigned: {section.techName || "(unassigned)"}
+              </span>
+            )}
+          </div>
           {!hasTasks && (
             <div className="section-subtitle">
               {section.techName ? `Tech: ${section.techName}` : "Tech: (unassigned)"}
@@ -202,6 +209,26 @@ function Section({
 
       {open && (
         <div className="section-body">
+          {/* Section-level tech assignment for sections WITH tasks */}
+          {hasTasks && canAssign && onAssignTech && (
+            <div className="tech-assign" style={{ marginBottom: '16px' }}>
+              <label className="assign-tech-label">
+                <span className="assign-tech-text">Assigned Tech:</span>
+                <select
+                  className="assign-tech-select"
+                  value={section.techName || "(unassigned)"}
+                  onChange={(e) => onAssignTech(sectionKey, e.target.value)}
+                >
+                  {techOptions.map((name) => (
+                    <option key={name} value={name}>
+                      {name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+          )}
+
           {!hasTasks && (
             <>
               {canAssign && onAssignTech && (
@@ -282,48 +309,15 @@ function Section({
                 const taskItems = getTaskItems(task);
                 const taskTotal = taskItems.length;
                 const taskCompleted = taskItems.filter((i) => i.completed).length;
-                const taskAllDone = taskTotal > 0 && taskCompleted === taskTotal;
 
                 return (
                   <details key={task.id} className="task-group">
                     <summary className="task-group-header">
                       <span className="task-title">{task.title}</span>
-
-                      <span className="task-assigned-tech">
-                        {task.assignedTech && task.assignedTech !== "(unassigned)"
-                          ? task.assignedTech
-                          : "Unassigned"}
-                      </span>
-
                       <span className="task-progress">
                         {taskCompleted}/{taskTotal}
                       </span>
                     </summary>
-
-                    {task.subtitle && (
-                      <div className="task-subtitle-text">{task.subtitle}</div>
-                    )}
-
-                    {canAssign && onAssignTech && (
-                      <div className="tech-assign">
-                        <label className="assign-tech-label">
-                          <span className="assign-tech-text">Assigned Tech:</span>
-                          <select
-                            className="assign-tech-select"
-                            value={task.assignedTech || "(unassigned)"}
-                            onChange={(e) =>
-                              onAssignTech(sectionKey, e.target.value, task.id)
-                            }
-                          >
-                            {techOptions.map((name) => (
-                              <option key={name} value={name}>
-                                {name}
-                              </option>
-                            ))}
-                          </select>
-                        </label>
-                      </div>
-                    )}
 
                     <ul className="checklist">
                       {taskItems.map((item) => (
@@ -346,7 +340,7 @@ function Section({
               })}
             </div>
           )}
-            {/* ADD THIS NEW SECTION-LEVEL MANAGER VERIFICATION */}
+
           {hasTasks && (
             <div className="manager-verification">
               {canVerify && (
@@ -365,15 +359,13 @@ function Section({
                 </label>
               )}
 
-              {/* This shows to EVERYONE including Techs */}
               <div className="manager-timestamp">
                 {section.managerVerified && section.verifiedAt
                   ? `Verified by manager at: ${section.verifiedAt}`
                   : "Awaiting manager verification"}
               </div>
             </div>
-            )}
-                
+          )}
         </div>
       )}
     </div>
