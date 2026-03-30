@@ -585,7 +585,7 @@ const saveAdminEditor = async () => {
       }
     }
     setHydrated(true);
-  }, [currentGame, checklistsLoaded]);
+  }, [currentGame, checklistsLoaded, activeTab]);
 
   useEffect(() => {
     if (!currentGame) return;
@@ -595,7 +595,7 @@ const saveAdminEditor = async () => {
     if (!key) return;
 
     localStorage.setItem(`sections_${key}_${activeTab}`, JSON.stringify(sections));
-  }, [sections, currentGame, hydrated]);
+  }, [sections, currentGame, hydrated, activeTab]);
 
   const handleToggleItem = (sectionKey, itemId, taskId = null) => {
     setSections((prev) => {
