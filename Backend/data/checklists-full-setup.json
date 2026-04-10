@@ -445,31 +445,6 @@
         ],
         "managerVerified": false,
         "verifiedAt": null
-      },
-      {
-        "id": "pg-2",
-        "title": "Breakdown Checklist",
-        "subtitle": false,
-        "assignedTech": "(unassigned)",
-        "items": [
-          {
-            "id": "item-1",
-            "label": "Disconnect switch and biscuit cables",
-            "completed": false
-          },
-          {
-            "id": "item-2",
-            "label": "Coil and store all cables",
-            "completed": false
-          },
-          {
-            "id": "item-3",
-            "label": "Return all items to labeled crates and cart in DVOM Closet",
-            "completed": false
-          }
-        ],
-        "managerVerified": false,
-        "verifiedAt": null
       }
     ]
   },
