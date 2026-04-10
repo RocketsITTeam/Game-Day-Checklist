@@ -12,7 +12,7 @@
           {
             "id": "item-1",
             "label": "Verify Patch cables under tabletop are connected to matching cables for away and home sides of the table",
-            "completed": false
+            "completed": true
           }
         ],
         "managerVerified": false,
@@ -106,7 +106,7 @@
           },
           {
             "id": "item-3",
-            "label": "Connect black VGA cable to the back of the PTS and then to the corresponding connection on the Tissot machine in the whistle detection section",
+            "label": "Connect black VGA cable to the corresponding connection on the Tissot machine in the whistle detection section and then to the back of the PTS",
             "completed": false
           },
           {
@@ -116,7 +116,7 @@
           },
           {
             "id": "item-5",
-            "label": "Connect grey Precision Time USB cable to back of precision time then run underneath table and connect to dasher wall port labeled 'PTS'",
+            "label": "Connect the thick grey Precision Time USB cable to back of precision time then run underneath table and connect to dasher wall port labeled 'PTS'",
             "completed": false
           },
           {
@@ -206,7 +206,7 @@
           },
           {
             "id": "item-2",
-            "label": "Using 6ft white ethernet cable, direct connect Security phone to port 13 and place to the right of the monitor",
+            "label": "Using 3ft white ethernet cable, direct connect Security phone to port 13 and place to the right of the monitor",
             "completed": false
           },
           {
@@ -216,7 +216,12 @@
           },
           {
             "id": "item-5",
-            "label": "Using 6ft white ethernet cable connect Tracy's phone to port D020 on the right side of table",
+            "label": "Using 3ft white ethernet cable connect Tracy's phone to port D020 on the right side of table",
+            "completed": false
+          },
+          {
+            "id": "item-6",
+            "label": "Place Statitian phone to the left of the monitor and the Security phone to the right of the monitor.",
             "completed": false
           }
         ],
@@ -288,37 +293,32 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Using a purple jumper cable, patch switch Port 21 to Panel Port D024 above switch",
+            "label": "Connect long black cable labeled 'Switch-Home' to port 21 on switch for home bench connection",
             "completed": false
           },
           {
             "id": "item-2",
-            "label": "Connect long black cable labeled 'Switch-Home' to patch port D024 (left end of table) for home bench connection",
-            "completed": false
-          },
-          {
-            "id": "item-3",
             "label": "Run 'Switch-Home' cable under bench seats next to scorers table",
             "completed": false
           },
           {
-            "id": "item-4",
+            "id": "item-3",
             "label": "Place grey Cisco switch on floor under 2nd row bench and route cable underneath seat through the troth",
             "completed": false
           },
           {
+            "id": "item-4",
+            "label": "Connect 'Switch-Home' cable to switch port 1",
+            "completed": false
+          },
+          {
             "id": "item-5",
-            "label": "Connect 'Switch-Away' cable to switch port 1",
+            "label": "Connect 3 3ft grey Ethernet cables to Cisco switch in ports 6-8",
             "completed": false
           },
           {
             "id": "item-6",
-            "label": "Connect 3 4ft grey Ethernet cables to Cisco switch in ports 6-8",
-            "completed": false
-          },
-          {
-            "id": "item-7",
-            "label": "Using the fluke or testing laptop, verify connectivity: Home Bench IP - 172.32.x.x",
+            "label": "Using the fluke or testing laptop, verify connectivity: Home Bench IP - 172.55.x.x",
             "completed": false
           }
         ],
@@ -333,7 +333,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Connect 25ft orange ethernet cord labeled 'trunk' to port port 24 on switch and route it underneath the table to connect it to the dasher wall port labled 'NBA''",
+            "label": "Connect 25ft orange ethernet cord labeled 'trunk' to port port 24 on switch and route it underneath the table to connect it to the dasher wall 003 port labled 'NBA''",
             "completed": false
           }
         ],
@@ -394,36 +394,6 @@
         ],
         "managerVerified": false,
         "verifiedAt": null
-      },
-      {
-        "id": "pg-14",
-        "title": "Breakdown Checklist",
-        "subtitle": false,
-        "assignedTech": "(unassigned)",
-        "items": [
-          {
-            "id": "item-1",
-            "label": "Power off all devices",
-            "completed": false
-          },
-          {
-            "id": "item-2",
-            "label": "Disconnect and coil all cables from the table equipment and switches. Disconnect all cables underneath the bench.",
-            "completed": false
-          },
-          {
-            "id": "item-3",
-            "label": "Return all items to labeled crates and cart in DVOM Closet",
-            "completed": false
-          },
-          {
-            "id": "item-4",
-            "label": "Confirm all cables and equipment are labeled and secured",
-            "completed": false
-          }
-        ],
-        "managerVerified": false,
-        "verifiedAt": null
       }
     ]
   },
@@ -459,7 +429,7 @@
           },
           {
             "id": "item-5",
-            "label": "Run the labeled extended biscuit cables down the sides of the tables and secure them. ",
+            "label": "Route the labeled extended biscuit cables up to the tables and connect them to the switch. Make sure to fasten to table by attaching to velcro strip on table ",
             "completed": false
           },
           {
@@ -520,7 +490,7 @@
           },
           {
             "id": "item-2",
-            "label": "Using the picture, gather the corresponding referee packs from the bin in the IT office and replace the batteries. ALWAYS include an extra pack with fresh batteries in case of emergencies.",
+            "label": "Using the picture, gather the corresponding referee packs from the bin in the IT office and replace the old batteries still in the packs. ALWAYS include an extra pack with fresh batteries in case of emergencies.",
             "completed": false
           },
           {
@@ -547,35 +517,10 @@
             "id": "item-7",
             "label": "Double check that power is on and deliver to referees/officers outside officials room in D-VOM 90 minutes before the game. The extra pack stays at the D-VOM table",
             "completed": false
-          }
-        ],
-        "managerVerified": false,
-        "verifiedAt": null
-      },
-      {
-        "id": "pg-2",
-        "title": "Breakdown Checklist",
-        "subtitle": false,
-        "assignedTech": "(unassigned)",
-        "items": [
-          {
-            "id": "item-1",
-            "label": "Collect all referee packs after the game",
-            "completed": false
           },
           {
-            "id": "item-2",
-            "label": "Power off referee packs.",
-            "completed": false
-          },
-          {
-            "id": "item-3",
-            "label": "Peel all tape from referee packs",
-            "completed": false
-          },
-          {
-            "id": "item-4",
-            "label": "Return all items to box in IT Office bin.",
+            "id": "item-8",
+            "label": "**WARNING** Fines are accrued if belt packs are delivered late.",
             "completed": false
           }
         ],
@@ -656,7 +601,7 @@
           },
           {
             "id": "item-8",
-            "label": "Connect black cable labled 'clock' to the usb port on the back of the Primary LT ethernet via USB to ethernet adapter",
+            "label": "Connect black cable labled 'clock' to the usb port on the back of the Primary Laptop ethernet via USB to ethernet adapter",
             "completed": false
           },
           {
@@ -666,7 +611,7 @@
           },
           {
             "id": "item-10",
-            "label": "Connect the black power cable and bank to the power strips behind the monitor and power on the replay monitor",
+            "label": "Open the latch using the red button on the back of monitor, connect the black power cable and bank to the power strips behind the monitor, connect the other end to the replay monitor and power on the replay monitor.",
             "completed": false
           },
           {
@@ -681,7 +626,7 @@
           },
           {
             "id": "item-13",
-            "label": "Place RTS in front of the switch and direct connect to port 5 using yellow ethernet cable labeled 'RTS'",
+            "label": "Place RTS in front of the switch, to the right of the keyboard, and direct connect to port 5 using blue ethernet cable labeled 'RTS'",
             "completed": false
           },
           {
@@ -711,7 +656,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Provide 3 bricks (stats sets up) and 2 power cords to the furthest left table",
+            "label": "Provide 3 bricks (stats sets up) and 2 power cords to the furthest left table. One will be set aside as a spare brick.",
             "completed": false
           },
           {
@@ -727,6 +672,11 @@
           {
             "id": "item-4",
             "label": "Run 1 blue 15ft ethernet cord labeled to be placed directly to the left of the replay monitor.",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "Note: Ports 12-17 are for internet pointing out and ports 19-20 are for home radio setup",
             "completed": false
           }
         ],
@@ -772,31 +722,6 @@
         ],
         "managerVerified": false,
         "verifiedAt": null
-      },
-      {
-        "id": "pg-5",
-        "title": "Breakdown Checklist",
-        "subtitle": false,
-        "assignedTech": "(unassigned)",
-        "items": [
-          {
-            "id": "item-1",
-            "label": "Power off and put away all laptops",
-            "completed": false
-          },
-          {
-            "id": "item-2",
-            "label": "Disconnect and coil all Ethernet and power cables.",
-            "completed": false
-          },
-          {
-            "id": "item-3",
-            "label": "Return switch, cables, gaff tape, radio bricks and devices to MC Quad D Closet",
-            "completed": false
-          }
-        ],
-        "managerVerified": false,
-        "verifiedAt": null
       }
     ]
   },
@@ -823,21 +748,6 @@
           {
             "id": "item-3",
             "label": "Place request forms for the 6ft Pink Ethernet cables in all of the corresponding sections",
-            "completed": false
-          }
-        ],
-        "managerVerified": false,
-        "verifiedAt": null
-      },
-      {
-        "id": "pg-2",
-        "title": "Breakdown Checklist",
-        "subtitle": false,
-        "assignedTech": "(unassigned)",
-        "items": [
-          {
-            "id": "item-1",
-            "label": "Collect all pink cables at the end of the game",
             "completed": false
           }
         ],
@@ -968,7 +878,7 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Setup Zoom Carts",
+            "label": "Setup Zoom Carts in specified location.",
             "completed": false
           },
           {
