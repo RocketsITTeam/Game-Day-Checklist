@@ -136,6 +136,11 @@
             "id": "item-1",
             "label": "Verify that request forms for the 6ft Pink Ethernet cables are in all of the corresponding sections",
             "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Collect all pink cables are collected after game ends.",
+            "completed": false
           }
         ],
         "managerVerified": false,
