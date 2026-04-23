@@ -441,11 +441,21 @@
             "id": "item-7",
             "label": "Test all patch cables for internet connectivity using the fluke or tester laptop(they need to be able to access the web)",
             "completed": false
+          },
+          {
+            "id": "item-8",
+            "label": "Go to www.speedtest.net and perform a speed test while at DVOM",
+            "completed": false
+          },
+          {
+            "id": "item-9",
+            "label": "After performing the speed test, take a screenshot and send it in the game chat for tonights game.",
+            "completed": false
           }
         ],
         "managerVerified": false,
         "verifiedAt": null
-      }
+      }    
     ]
   },
   "RefPacks": {
@@ -693,6 +703,16 @@
             "id": "item-6",
             "label": "On the PR laptop, go to settings and print a test page to verify printer is working properly",
             "completed": false
+          },
+          {
+            "id": "item-7",
+            "label": "Go to www.speedtest.net and perform a speed test while at DVOM",
+            "completed": false
+          },
+          {
+            "id": "item-8",
+            "label": "After performing the speed test, take a screenshot and send it in the game chat for tonights game.",
+            "completed": false
           }
         ],
         "managerVerified": false,
@@ -723,6 +743,16 @@
           {
             "id": "item-3",
             "label": "Place request forms for the 6ft Pink Ethernet cables in all of the corresponding sections",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "Go to www.speedtest.net and perform a speed test while at DVOM",
+            "completed": false
+          },
+          {
+            "id": "item-5",
+            "label": "After performing the speed test, take a screenshot and send it in the game chat for tonights game.",
             "completed": false
           }
         ],
