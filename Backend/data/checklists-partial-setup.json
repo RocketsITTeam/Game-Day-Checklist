@@ -114,6 +114,16 @@
             "id": "item-2",
             "label": "Check connections at each table to make sure they go out to the internet.",
             "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Go to www.speedtest.net and perform a speed test while at DVOM",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "After performing the speed test, take a screenshot and send it in the game chat for tonights game.",
+            "completed": false
           }
         ],
         "managerVerified": false,
@@ -256,6 +266,16 @@
             "id": "item-2",
             "label": "On the PR laptop, go to settings and print a test page to verify printer is working properly",
             "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Go to www.speedtest.net and perform a speed test while at DVOM",
+            "completed": false
+          },
+          {
+            "id": "item-4",
+            "label": "After performing the speed test, take a screenshot and send it in the game chat for tonights game.",
+            "completed": false
           }
         ],
         "managerVerified": false,
@@ -276,6 +296,16 @@
           {
             "id": "item-1",
             "label": "Place request forms for the 6ft Pink Ethernet cables in all of the corresponding sections",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Go to www.speedtest.net and perform a speed test while at DVOM",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "After performing the speed test, take a screenshot and send it in the game chat for tonights game.",
             "completed": false
           }
         ],
