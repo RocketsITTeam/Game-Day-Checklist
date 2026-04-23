@@ -3,7 +3,16 @@ import "./App.css";
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:4000";
 
-
+function isLocalStorageAvailable() {
+  try {
+    const test = '__localStorage_test__';
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
 
 const initialSections = {
   preGame: {
@@ -395,6 +404,7 @@ function App() {
   });
 
   const [loginPassword, setLoginPassword] = useState("");
+  const [storageAvailable] = useState(isLocalStorageAvailable());
   const [loginError, setLoginError] = useState("");
 
   const handleLoginSubmit = async (e) => {
@@ -783,6 +793,11 @@ function sectionIsVisibleForRole(sectionKey, sectionObj) {
       )}
 
       {gameError && <div className="error-banner">{gameError}</div>}
+      {!storageAvailable && (
+        <div className="error-banner">
+          Your browser is blocking data storage. Progress will not be saved. Please enable cookies/storage in Safari Settings - Privacy, or use Chrome.
+        </div>
+      )}
       {checklistsError && <div className="error-banner">{checklistsError}</div>}
       
       <header className="app-header">
