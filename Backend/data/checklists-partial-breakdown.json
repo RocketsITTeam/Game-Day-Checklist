@@ -25,6 +25,27 @@
       }
     ]
   },
+  "DVOM": {
+    "name": "DVOM",
+    "techName": "(unassigned)",
+    "tasks": [
+      {
+        "id": "pg-1",
+        "title": "DVOM",
+        "subtitle": false,
+        "assignedTech": "(unassigned)",
+        "items": [
+          {
+            "id": "item-1",
+            "label": "Verify that connections are still connected and leave as is.",
+            "completed": false
+          }
+        ],
+        "managerVerified": false,
+        "verifiedAt": null
+      }
+    ]
+  },
   "RefPacks": {
     "name": "REFEREE PACKS CHECKLIST",
     "techName": "(unassigned)",
@@ -74,6 +95,16 @@
           {
             "id": "item-1",
             "label": "verify that equipment is set up on the second table from right ONLY (when facing the court).",
+            "completed": false
+          },
+          {
+            "id": "item-2",
+            "label": "Place toner box and NGSS sign back in closet.",
+            "completed": false
+          },
+          {
+            "id": "item-3",
+            "label": "Retrieve all radio bricks and place in closet.",
             "completed": false
           }
         ],
@@ -134,12 +165,12 @@
         "items": [
           {
             "id": "item-1",
-            "label": "Verify that request forms for the 6ft Pink Ethernet cables are in all of the corresponding sections",
+            "label": "Retrieve all request forms for the 6ft Pink Ethernet cables and place back in closet.",
             "completed": false
           },
           {
             "id": "item-2",
-            "label": "Collect all pink cables are collected after game ends.",
+            "label": "Collect all pink cables are collected after game ends and place in closet bin.",
             "completed": false
           }
         ],
