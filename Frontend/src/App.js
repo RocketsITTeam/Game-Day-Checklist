@@ -569,23 +569,23 @@ const saveAdminEditor = async () => {
       } finally {
         setChecklistsLoaded(true);
         // Load assignments from backend
-            const key = getGameKey(currentGame);
-            if (key) {
-              const savedAssignments = await loadAssignments(key, activeTab);
-              if (Object.keys(savedAssignments).length > 0) {
-                setSections(prev => {
-                  const updated = { ...prev };
-                  Object.keys(savedAssignments).forEach(sectionKey => {
-                    if (updated[sectionKey]) {
-                      updated[sectionKey].techName = savedAssignments[sectionKey];
-                    }
-                  });
-                  return updated;
-                });
-              }
-            }
+        const key = getGameKey(currentGame);
+        if (key) {
+          const savedAssignments = await loadAssignments(key, activeTab);
+          if (Object.keys(savedAssignments).length > 0) {
+            setSections(prev => {
+              const updated = { ...prev };
+              Object.keys(savedAssignments).forEach(sectionKey => {
+                if (updated[sectionKey]) {
+                  updated[sectionKey].techName = savedAssignments[sectionKey];
+                }
+              });
+              return updated;
+            });
           }
+        }
       }
+    }
     loadChecklists();
   }, [activeTab]);
   
