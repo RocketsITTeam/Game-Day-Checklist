@@ -187,6 +187,44 @@ app.put("/techs", (req, res) => {
     res.status(500).json({ error: "Failed to save techs" });
   }
 });
+// Get current assignments for a game
+app.get("/assignments/:gameKey/:tab", (req, res) => {
+  const { gameKey, tab } = req.params;
+  const assignmentsPath = path.join(__dirname, "data", `assignments-${gameKey}-${tab}.json`);
+  
+  try {
+    if (fs.existsSync(assignmentsPath)) {
+      const json = fs.readFileSync(assignmentsPath, "utf-8");
+      res.json(JSON.parse(json));
+    } else {
+      // Return empty assignments if file doesn't exist yet
+      res.json({});
+    }
+  } catch (err) {
+    console.error("Error reading assignments:", err);
+    res.status(500).json({ error: "Failed to load assignments" });
+  }
+});
+
+// Save assignments for a game
+app.put("/assignments/:gameKey/:tab", (req, res) => {
+  const adminPassword = req.headers["x-admin-password"];
+  if (adminPassword !== process.env.ADMIN_PASSWORD) {
+    return res.status(403).json({ error: "Forbidden" });
+  }
+
+  const { gameKey, tab } = req.params;
+  const assignmentsPath = path.join(__dirname, "data", `assignments-${gameKey}-${tab}.json`);
+
+  try {
+    const assignments = req.body;
+    fs.writeFileSync(assignmentsPath, JSON.stringify(assignments, null, 2), "utf-8");
+    res.json({ ok: true });
+  } catch (err) {
+    console.error("Error writing assignments:", err);
+    res.status(500).json({ error: "Failed to save assignments" });
+  }
+});
 
 
 // Health check
