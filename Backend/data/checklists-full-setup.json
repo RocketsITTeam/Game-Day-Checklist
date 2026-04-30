@@ -12,7 +12,7 @@
           {
             "id": "item-1",
             "label": "Verify Patch cables under tabletop are connected to matching cables for away and home sides of the table",
-            "completed": true
+            "completed": false
           }
         ],
         "managerVerified": false,
