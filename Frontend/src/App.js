@@ -3,16 +3,7 @@ import "./App.css";
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:4000";
 
-function isLocalStorageAvailable() {
-  try {
-    const test = '__localStorage_test__';
-    localStorage.setItem(test, test);
-    localStorage.removeItem(test);
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
+
 
 const initialSections = {
   preGame: {
@@ -377,6 +368,7 @@ function Section({
           )}
         </div>
       )}
+      
     </div>
   );
 }
@@ -397,6 +389,34 @@ function RoleSelector({ role, onChange }) {
     </div>
   );
 }
+// Load assignments from backend
+async function loadAssignments(gameKey, tab) {
+  try {
+    const res = await fetch(`${API_BASE_URL}/assignments/${gameKey}/${tab}`);
+    if (res.ok) {
+      return await res.json();
+    }
+  } catch (err) {
+    console.error("Error loading assignments:", err);
+  }
+  return {};
+}
+
+// Save assignments to backend
+async function saveAssignments(gameKey, tab, assignments, adminPassword) {
+  try {
+    await fetch(`${API_BASE_URL}/assignments/${gameKey}/${tab}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "x-admin-password": adminPassword,
+      },
+      body: JSON.stringify(assignments),
+    });
+  } catch (err) {
+    console.error("Error saving assignments:", err);
+  }
+}
 
 function App() {
   const [authUser, setAuthUser] = useState(() => {
@@ -404,7 +424,6 @@ function App() {
   });
 
   const [loginPassword, setLoginPassword] = useState("");
-  const [storageAvailable] = useState(isLocalStorageAvailable());
   const [loginError, setLoginError] = useState("");
 
   const handleLoginSubmit = async (e) => {
@@ -549,10 +568,27 @@ const saveAdminEditor = async () => {
         setSections(initialSections);
       } finally {
         setChecklistsLoaded(true);
+        // Load assignments from backend
+            const key = getGameKey(currentGame);
+            if (key) {
+              const savedAssignments = await loadAssignments(key, activeTab);
+              if (Object.keys(savedAssignments).length > 0) {
+                setSections(prev => {
+                  const updated = { ...prev };
+                  Object.keys(savedAssignments).forEach(sectionKey => {
+                    if (updated[sectionKey]) {
+                      updated[sectionKey].techName = savedAssignments[sectionKey];
+                    }
+                  });
+                  return updated;
+                });
+              }
+            }
+          }
       }
-    }
     loadChecklists();
   }, [activeTab]);
+  
 
   useEffect(() => {
     async function loadCurrentGame() {
@@ -793,11 +829,6 @@ function sectionIsVisibleForRole(sectionKey, sectionObj) {
       )}
 
       {gameError && <div className="error-banner">{gameError}</div>}
-      {!storageAvailable && (
-        <div className="error-banner">
-          Your browser is blocking data storage. Progress will not be saved. Please enable cookies/storage in Safari Settings - Privacy, or use Chrome.
-        </div>
-      )}
       {checklistsError && <div className="error-banner">{checklistsError}</div>}
       
       <header className="app-header">
