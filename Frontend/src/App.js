@@ -560,6 +560,20 @@ const saveAdminEditor = async () => {
         const res = await fetch(`${API_BASE_URL}/checklists/${activeTab}`);
         if (!res.ok) throw new Error("HTTP " + res.status);
         const data = await res.json();
+        
+        // Load assignments FIRST, then merge with checklist data
+        const key = getGameKey(currentGame);
+        if (key) {
+          const savedAssignments = await loadAssignments(key, activeTab);
+          if (Object.keys(savedAssignments).length > 0) {
+            Object.keys(data).forEach(sectionKey => {
+              if (savedAssignments[sectionKey]) {
+                data[sectionKey].techName = savedAssignments[sectionKey];
+              }
+            });
+          }
+        }
+        
         setSections(data);
         setChecklistsError(null);
       } catch (err) {
@@ -568,22 +582,6 @@ const saveAdminEditor = async () => {
         setSections(initialSections);
       } finally {
         setChecklistsLoaded(true);
-        // Load assignments from backend
-        const key = getGameKey(currentGame);
-        if (key) {
-          const savedAssignments = await loadAssignments(key, activeTab);
-          if (Object.keys(savedAssignments).length > 0) {
-            setSections(prev => {
-              const updated = { ...prev };
-              Object.keys(savedAssignments).forEach(sectionKey => {
-                if (updated[sectionKey]) {
-                  updated[sectionKey].techName = savedAssignments[sectionKey];
-                }
-              });
-              return updated;
-            });
-          }
-        }
       }
     }
     loadChecklists();
