@@ -719,7 +719,7 @@ const saveAdminEditor = async () => {
     });
   };
 
-  const handleAssignTech = (sectionKey, techName, taskId = null) => {
+  const handleAssignTech = async (sectionKey, techName, taskId = null) => {
     setSections((prev) => {
       const section = prev?.[sectionKey];
       if (!section) return prev;
@@ -743,8 +743,28 @@ const saveAdminEditor = async () => {
         [sectionKey]: { ...section, techName: displayName },
       };
     });
-  };
 
+    // Save to backend if admin and it's a section-level assignment (not task-level)
+    if (!taskId && authUser?.authRole === "ADMIN" && currentGame) {
+      const key = getGameKey(currentGame);
+      if (key) {
+        // Get current assignments from state
+        const assignmentsToSave = {};
+        Object.keys(sections).forEach(k => {
+          assignmentsToSave[k] = sections[k]?.techName || "(unassigned)";
+        });
+        // Update with the new assignment
+        assignmentsToSave[sectionKey] = techName === "(unassigned)" || techName.trim() === "" ? "(unassigned)" : techName;
+        
+        // Get admin password from localStorage
+        const storedAuth = localStorage.getItem("authUser");
+        const authData = storedAuth ? JSON.parse(storedAuth) : null;
+        const adminPassword = authData?.password || process.env.REACT_APP_ADMIN_PASSWORD;
+        
+        await saveAssignments(key, activeTab, assignmentsToSave, adminPassword);
+      }
+    }
+  };
   const handleAdminEdit = (sectionKey) => {
     const sectionName = sections?.[sectionKey]?.name || sectionKey;
     alert(`Admin edit mode for: ${sectionName} (to be implemented later).`);
