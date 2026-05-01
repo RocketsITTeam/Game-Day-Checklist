@@ -405,6 +405,7 @@ async function loadAssignments(gameKey, tab) {
 // Save assignments to backend
 async function saveAssignments(gameKey, tab, assignments, adminPassword) {
   try {
+    console.log("saveAssignments called with:", { gameKey, tab, adminPassword, assignments });
     await fetch(`${API_BASE_URL}/assignments/${gameKey}/${tab}`, {
       method: "PUT",
       headers: {
@@ -444,7 +445,7 @@ function App() {
       return;
     }
 
-    const user = { authRole: data.authRole, password: loginPassword };
+    const user = { authRole: data.authRole };
     setAuthUser(user);
     localStorage.setItem("authUser", JSON.stringify(user));
 
