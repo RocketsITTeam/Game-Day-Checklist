@@ -759,7 +759,7 @@ const saveAdminEditor = async () => {
         // Get admin password from localStorage
         const storedAuth = localStorage.getItem("authUser");
         const authData = storedAuth ? JSON.parse(storedAuth) : null;
-        const adminPassword = authData?.password || process.env.REACT_APP_ADMIN_PASSWORD;
+        const adminPassword = authData?.password;
         
         await saveAssignments(key, activeTab, assignmentsToSave, adminPassword);
       }
