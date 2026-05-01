@@ -405,7 +405,6 @@ async function loadAssignments(gameKey, tab) {
 // Save assignments to backend
 async function saveAssignments(gameKey, tab, assignments, adminPassword) {
   try {
-    console.log("saveAssignments called with:", { gameKey, tab, adminPassword, assignments });
     await fetch(`${API_BASE_URL}/assignments/${gameKey}/${tab}`, {
       method: "PUT",
       headers: {
@@ -759,8 +758,11 @@ const saveAdminEditor = async () => {
         
         // Get admin password from localStorage
         const storedAuth = localStorage.getItem("authUser");
+        console.log("storedAuth raw:", storedAuth);
         const authData = storedAuth ? JSON.parse(storedAuth) : null;
+        console.log("authData parsed:", authData);
         const adminPassword = authData?.password;
+        console.log("adminPassword extracted:", adminPassword);
         
         await saveAssignments(key, activeTab, assignmentsToSave, adminPassword);
       }
