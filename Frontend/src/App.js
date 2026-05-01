@@ -444,7 +444,7 @@ function App() {
       return;
     }
 
-    const user = { authRole: data.authRole };
+    const user = { authRole: data.authRole, password: loginPassword };
     setAuthUser(user);
     localStorage.setItem("authUser", JSON.stringify(user));
 
