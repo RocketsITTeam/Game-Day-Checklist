@@ -1,4 +1,4 @@
-#🏀 Game Day Checklist
+# Game Day Checklist
 
 Houston Rockets IT Team — Game Day Setup & Breakdown Web Application
 
