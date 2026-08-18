@@ -246,6 +246,13 @@ app.get("/progress/:gameKey/:tab", (req, res) => {
 });
 
 // Save checkbox progress for a game/tab (Tech or Admin can save)
+//
+// IMPORTANT: this MERGES the incoming sections into the existing saved file,
+// rather than overwriting the whole thing. The frontend is expected to send
+// only the section(s) that actually changed. This is what allows multiple
+// techs working on different sections at the same time (all under the same
+// login) to save simultaneously without one person's stale copy of another
+// section wiping out someone else's progress.
 app.put("/progress/:gameKey/:tab", (req, res) => {
   const password = req.headers["x-password"];
   const TECH_PASSWORD = process.env.TECH_PASSWORD;
@@ -259,8 +266,24 @@ app.put("/progress/:gameKey/:tab", (req, res) => {
   const progressPath = path.join(__dirname, "data", `progress-${gameKey}-${tab}.json`);
 
   try {
-    const progress = req.body;
-    fs.writeFileSync(progressPath, JSON.stringify(progress, null, 2), "utf-8");
+    const incoming = req.body || {};
+
+    let existing = {};
+    if (fs.existsSync(progressPath)) {
+      try {
+        existing = JSON.parse(fs.readFileSync(progressPath, "utf-8"));
+      } catch (parseErr) {
+        console.error("Existing progress file was corrupt, starting fresh:", parseErr);
+        existing = {};
+      }
+    }
+
+    // Merge only at the top level: any sectionKey present in `incoming`
+    // fully replaces that section in `existing`; every other section in
+    // `existing` (that wasn't part of this save) is left untouched.
+    const merged = { ...existing, ...incoming };
+
+    fs.writeFileSync(progressPath, JSON.stringify(merged, null, 2), "utf-8");
     res.json({ ok: true });
   } catch (err) {
     console.error("Error writing progress:", err);
