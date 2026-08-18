@@ -519,6 +519,11 @@ function applyProgress(data, progress) {
           task.verifiedAt = tp.verifiedAt ?? null;
         }
       });
+      // Sections with task groups still show SECTION-level verification in the UI
+      if (sectionProgress.managerVerified !== undefined) {
+        section.managerVerified = !!sectionProgress.managerVerified;
+        section.verifiedAt = sectionProgress.verifiedAt ?? null;
+      }
     } else {
       const items = Array.isArray(section.items) ? section.items : [];
       items.forEach((item) => {
