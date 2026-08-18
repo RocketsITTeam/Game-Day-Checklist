@@ -454,32 +454,45 @@ async function saveProgress(gameKey, tab, progress, password) {
   }
 }
 
-// Extract just { sectionKey: { itemId: completed } } from full sections state
+// Extract { sectionKey: { items: { itemId: completed }, managerVerified, verifiedAt,
+//                          tasks: { taskId: { managerVerified, verifiedAt } } } }
 function extractProgress(sections) {
   const progress = {};
   Object.keys(sections || {}).forEach((sectionKey) => {
     const section = sections[sectionKey];
     if (!section) return;
-    progress[sectionKey] = {};
+
+    const entry = {
+      items: {},
+      managerVerified: !!section.managerVerified,
+      verifiedAt: section.verifiedAt ?? null,
+      tasks: {},
+    };
 
     const { list: taskGroups } = getTaskGroups(section);
     if (taskGroups.length > 0) {
       taskGroups.forEach((task) => {
         getTaskItems(task).forEach((item) => {
-          progress[sectionKey][item.id] = !!item.completed;
+          entry.items[item.id] = !!item.completed;
         });
+        entry.tasks[task.id] = {
+          managerVerified: !!task.managerVerified,
+          verifiedAt: task.verifiedAt ?? null,
+        };
       });
     } else {
       const items = Array.isArray(section.items) ? section.items : [];
       items.forEach((item) => {
-        progress[sectionKey][item.id] = !!item.completed;
+        entry.items[item.id] = !!item.completed;
       });
     }
+
+    progress[sectionKey] = entry;
   });
   return progress;
 }
 
-// Merge saved { sectionKey: { itemId: completed } } progress into fresh checklist data
+// Merge saved progress (item completion + manager verification) into fresh checklist data
 function applyProgress(data, progress) {
   if (!progress) return data;
   Object.keys(data || {}).forEach((sectionKey) => {
@@ -487,22 +500,36 @@ function applyProgress(data, progress) {
     const sectionProgress = progress[sectionKey];
     if (!section || !sectionProgress) return;
 
+    // Support both new shape ({ items, managerVerified, verifiedAt, tasks })
+    // and old shape ({ itemId: completed }) for backward compatibility.
+    const itemProgress = sectionProgress.items || sectionProgress;
+    const taskProgress = sectionProgress.tasks || {};
+
     const { list: taskGroups } = getTaskGroups(section);
     if (taskGroups.length > 0) {
       taskGroups.forEach((task) => {
         getTaskItems(task).forEach((item) => {
-          if (sectionProgress[item.id] !== undefined) {
-            item.completed = sectionProgress[item.id];
+          if (itemProgress[item.id] !== undefined) {
+            item.completed = itemProgress[item.id];
           }
         });
+        const tp = taskProgress[task.id];
+        if (tp) {
+          task.managerVerified = !!tp.managerVerified;
+          task.verifiedAt = tp.verifiedAt ?? null;
+        }
       });
     } else {
       const items = Array.isArray(section.items) ? section.items : [];
       items.forEach((item) => {
-        if (sectionProgress[item.id] !== undefined) {
-          item.completed = sectionProgress[item.id];
+        if (itemProgress[item.id] !== undefined) {
+          item.completed = itemProgress[item.id];
         }
       });
+      if (sectionProgress.managerVerified !== undefined) {
+        section.managerVerified = !!sectionProgress.managerVerified;
+        section.verifiedAt = sectionProgress.verifiedAt ?? null;
+      }
     }
   });
   return data;
@@ -728,9 +755,82 @@ const saveAdminEditor = async () => {
   }, [sections, currentGame, hydrated, activeTab]);
 
   const handleToggleItem = async (sectionKey, itemId, taskId = null) => {
+    let nextSectionsSnapshot = null;
+
+    setSections((prev) => {
+      const section = prev?.[sectionKey];
+      if (!section) return prev;
+
+      const { key: taskKey, list: taskGroups } = getTaskGroups(section);
+
+      let nextState;
+
+      if (taskId && taskKey) {
+        const nextGroups = taskGroups.map((t) => {
+          if (t.id !== taskId) return t;
+
+          const curItems = getTaskItems(t);
+          const nextItems = curItems.map((it) =>
+            it.id === itemId ? { ...it, completed: !it.completed } : it
+          );
+
+          const anyIncomplete = nextItems.some((i) => !i.completed);
+
+          const nextTask = setTaskItems(
+            {
+              ...t,
+              managerVerified: anyIncomplete ? false : !!t.managerVerified,
+              verifiedAt: anyIncomplete ? null : t.verifiedAt,
+            },
+            nextItems
+          );
+
+          return nextTask;
+        });
+
+        nextState = { ...prev, [sectionKey]: { ...section, [taskKey]: nextGroups } };
+      } else {
+        const items = (Array.isArray(section.items) ? section.items : []).map((item) =>
+          item.id === itemId ? { ...item, completed: !item.completed } : item
+        );
+
+        const anyIncomplete = items.some((i) => !i.completed);
+
+        nextState = {
+          ...prev,
+          [sectionKey]: {
+            ...section,
+            items,
+            managerVerified: anyIncomplete ? false : !!section.managerVerified,
+            verifiedAt: anyIncomplete ? null : section.verifiedAt,
+          },
+        };
+      }
+
+      nextSectionsSnapshot = nextState;
+      return nextState;
+    });
+
+    // Save shared progress to backend so it shows up on other devices (e.g. Manager view)
+    console.log("handleToggleItem: attempting save. currentGame:", currentGame, "nextSectionsSnapshot:", !!nextSectionsSnapshot);
+    if (currentGame && nextSectionsSnapshot) {
+      const key = getGameKey(currentGame);
+      if (key) {
+        const storedAuth = localStorage.getItem("authUser");
+        const authData = storedAuth ? JSON.parse(storedAuth) : null;
+        const password = authData?.password;
+
+        const progressToSave = extractProgress(nextSectionsSnapshot);
+        await saveProgress(key, activeTab, progressToSave, password);
+      }
+    }
+  };
+
+  const handleToggleManagerVerified = async (sectionKey, taskId = null) => {
     const section = sections?.[sectionKey];
     if (!section) return;
 
+    const formatted = new Date().toLocaleString();
     const { key: taskKey, list: taskGroups } = getTaskGroups(section);
 
     let nextState;
@@ -738,49 +838,31 @@ const saveAdminEditor = async () => {
     if (taskId && taskKey) {
       const nextGroups = taskGroups.map((t) => {
         if (t.id !== taskId) return t;
-
-        const curItems = getTaskItems(t);
-        const nextItems = curItems.map((it) =>
-          it.id === itemId ? { ...it, completed: !it.completed } : it
-        );
-
-        const anyIncomplete = nextItems.some((i) => !i.completed);
-
-        const nextTask = setTaskItems(
-          {
-            ...t,
-            managerVerified: anyIncomplete ? false : !!t.managerVerified,
-            verifiedAt: anyIncomplete ? null : t.verifiedAt,
-          },
-          nextItems
-        );
-
-        return nextTask;
+        const nextVerified = !t.managerVerified;
+        return {
+          ...t,
+          managerVerified: nextVerified,
+          verifiedAt: nextVerified ? formatted : null,
+        };
       });
 
       nextState = { ...sections, [sectionKey]: { ...section, [taskKey]: nextGroups } };
     } else {
-      const items = (Array.isArray(section.items) ? section.items : []).map((item) =>
-        item.id === itemId ? { ...item, completed: !item.completed } : item
-      );
-
-      const anyIncomplete = items.some((i) => !i.completed);
+      const nextVerified = !section.managerVerified;
 
       nextState = {
         ...sections,
         [sectionKey]: {
           ...section,
-          items,
-          managerVerified: anyIncomplete ? false : !!section.managerVerified,
-          verifiedAt: anyIncomplete ? null : section.verifiedAt,
+          managerVerified: nextVerified,
+          verifiedAt: nextVerified ? formatted : null,
         },
       };
     }
 
     setSections(nextState);
 
-    // Save shared progress to backend so it shows up on other devices (e.g. Manager view)
-    console.log("handleToggleItem: attempting save. currentGame:", currentGame, "nextState:", !!nextState);
+    // Save shared verification status to backend so Techs see it after refreshing
     if (currentGame && nextState) {
       const key = getGameKey(currentGame);
       if (key) {
@@ -792,41 +874,6 @@ const saveAdminEditor = async () => {
         await saveProgress(key, activeTab, progressToSave, password);
       }
     }
-  };
-
-  const handleToggleManagerVerified = (sectionKey, taskId = null) => {
-    setSections((prev) => {
-      const section = prev?.[sectionKey];
-      if (!section) return prev;
-
-      const formatted = new Date().toLocaleString();
-      const { key: taskKey, list: taskGroups } = getTaskGroups(section);
-
-      if (taskId && taskKey) {
-        const nextGroups = taskGroups.map((t) => {
-          if (t.id !== taskId) return t;
-          const nextVerified = !t.managerVerified;
-          return {
-            ...t,
-            managerVerified: nextVerified,
-            verifiedAt: nextVerified ? formatted : null,
-          };
-        });
-
-        return { ...prev, [sectionKey]: { ...section, [taskKey]: nextGroups } };
-      }
-      
-      const nextVerified = !section.managerVerified;
-
-      return {
-        ...prev,
-        [sectionKey]: {
-          ...section,
-          managerVerified: nextVerified,
-          verifiedAt: nextVerified ? formatted : null,
-        },
-      };
-    });
   };
 
   const handleAssignTech = async (sectionKey, techName, taskId = null) => {
