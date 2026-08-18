@@ -728,72 +728,67 @@ const saveAdminEditor = async () => {
   }, [sections, currentGame, hydrated, activeTab]);
 
   const handleToggleItem = async (sectionKey, itemId, taskId = null) => {
-    let nextSectionsSnapshot = null;
+    const section = sections?.[sectionKey];
+    if (!section) return;
 
-    setSections((prev) => {
-      const section = prev?.[sectionKey];
-      if (!section) return prev;
+    const { key: taskKey, list: taskGroups } = getTaskGroups(section);
 
-      const { key: taskKey, list: taskGroups } = getTaskGroups(section);
+    let nextState;
 
-      let nextState;
+    if (taskId && taskKey) {
+      const nextGroups = taskGroups.map((t) => {
+        if (t.id !== taskId) return t;
 
-      if (taskId && taskKey) {
-        const nextGroups = taskGroups.map((t) => {
-          if (t.id !== taskId) return t;
-
-          const curItems = getTaskItems(t);
-          const nextItems = curItems.map((it) =>
-            it.id === itemId ? { ...it, completed: !it.completed } : it
-          );
-
-          const anyIncomplete = nextItems.some((i) => !i.completed);
-
-          const nextTask = setTaskItems(
-            {
-              ...t,
-              managerVerified: anyIncomplete ? false : !!t.managerVerified,
-              verifiedAt: anyIncomplete ? null : t.verifiedAt,
-            },
-            nextItems
-          );
-
-          return nextTask;
-        });
-
-        nextState = { ...prev, [sectionKey]: { ...section, [taskKey]: nextGroups } };
-      } else {
-        const items = (Array.isArray(section.items) ? section.items : []).map((item) =>
-          item.id === itemId ? { ...item, completed: !item.completed } : item
+        const curItems = getTaskItems(t);
+        const nextItems = curItems.map((it) =>
+          it.id === itemId ? { ...it, completed: !it.completed } : it
         );
 
-        const anyIncomplete = items.some((i) => !i.completed);
+        const anyIncomplete = nextItems.some((i) => !i.completed);
 
-        nextState = {
-          ...prev,
-          [sectionKey]: {
-            ...section,
-            items,
-            managerVerified: anyIncomplete ? false : !!section.managerVerified,
-            verifiedAt: anyIncomplete ? null : section.verifiedAt,
+        const nextTask = setTaskItems(
+          {
+            ...t,
+            managerVerified: anyIncomplete ? false : !!t.managerVerified,
+            verifiedAt: anyIncomplete ? null : t.verifiedAt,
           },
-        };
-      }
+          nextItems
+        );
 
-      nextSectionsSnapshot = nextState;
-      return nextState;
-    });
+        return nextTask;
+      });
+
+      nextState = { ...sections, [sectionKey]: { ...section, [taskKey]: nextGroups } };
+    } else {
+      const items = (Array.isArray(section.items) ? section.items : []).map((item) =>
+        item.id === itemId ? { ...item, completed: !item.completed } : item
+      );
+
+      const anyIncomplete = items.some((i) => !i.completed);
+
+      nextState = {
+        ...sections,
+        [sectionKey]: {
+          ...section,
+          items,
+          managerVerified: anyIncomplete ? false : !!section.managerVerified,
+          verifiedAt: anyIncomplete ? null : section.verifiedAt,
+        },
+      };
+    }
+
+    setSections(nextState);
 
     // Save shared progress to backend so it shows up on other devices (e.g. Manager view)
-    console.log("handleToggleItem: attempting save. currentGame:", currentGame, "nextSectionsSnapshot:", !!nextSectionsSnapshot);
-    if (currentGame && nextSectionsSnapshot) {
+    console.log("handleToggleItem: attempting save. currentGame:", currentGame, "nextState:", !!nextState);
+    if (currentGame && nextState) {
       const key = getGameKey(currentGame);
       if (key) {
         const storedAuth = localStorage.getItem("authUser");
         const authData = storedAuth ? JSON.parse(storedAuth) : null;
         const password = authData?.password;
 
-        const progressToSave = extractProgress(nextSectionsSnapshot);
+        const progressToSave = extractProgress(nextState);
         await saveProgress(key, activeTab, progressToSave, password);
       }
     }
