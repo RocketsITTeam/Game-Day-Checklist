@@ -20,7 +20,7 @@ The Game Day Checklist app streamlines the coordination of IT operations before,
 Each game day creates a fresh checklist instance, and users across three roles - Tech, Manager, and Admin — interact with it at different levels of access and responsibility.
 Instructions for how to use the app are here: 
 
-- [How to Use the App]((https://github.com/RocketsITTeam/Game-Day-Checklist/blob/44ebd5bc6f39db8d6f4a789d8e5cd39252ee841f/Instructions/How%20to%20Use%20App.md))
+- [How to Use the App](https://github.com/RocketsITTeam/Game-Day-Checklist/blob/44ebd5bc6f39db8d6f4a789d8e5cd39252ee841f/Instructions/How%20to%20Use%20App.md)
 
 ## Features
 
