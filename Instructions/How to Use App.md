@@ -46,6 +46,10 @@ When you log in with the Tech password, you'll see all sections (e.g. Front Tabl
 
 > **Note:** Take a screenshot of your completed section(s) when you're done and send it to your Manager. This is your backup record in case anything doesn't save properly.
 
+Once verified, a section will look like this — fully checked off, with a "Verified by manager" timestamp at the bottom:
+
+![Example of a verified section](verification-example.png)
+
 ## Phone Browser Requirements
 
 **Best option — iPhone or Android:** Use Chrome. Android usually has it by default; iPhone users can download it free from the App Store.
