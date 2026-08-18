@@ -18,6 +18,9 @@ A role-based web application used by the Rockets IT team to coordinate, track, a
 ## Overview
 The Game Day Checklist app streamlines the coordination of IT operations before, during, and after Houston Rockets home games. Rather than relying on paper checklists or scattered communication, this platform gives every team member a single source of truth for what needs to be done and who is responsible.
 Each game day creates a fresh checklist instance, and users across three roles - Tech, Manager, and Admin — interact with it at different levels of access and responsibility.
+Instructions for how to use the app are here: 
+
+- [How to Use the App](Instructions/How-to-Use-App.md)
 
 ## Features
 
