@@ -434,7 +434,8 @@ async function loadProgress(gameKey, tab) {
 // Save checkbox progress to backend
 async function saveProgress(gameKey, tab, progress, password) {
   try {
-    await fetch(`${API_BASE_URL}/progress/${gameKey}/${tab}`, {
+    console.log("saveProgress called with:", { gameKey, tab, password, progress });
+    const res = await fetch(`${API_BASE_URL}/progress/${gameKey}/${tab}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -442,6 +443,12 @@ async function saveProgress(gameKey, tab, progress, password) {
       },
       body: JSON.stringify(progress),
     });
+    if (!res.ok) {
+      const text = await res.text();
+      console.error("saveProgress FAILED:", res.status, text);
+    } else {
+      console.log("saveProgress SUCCESS");
+    }
   } catch (err) {
     console.error("Error saving progress:", err);
   }
@@ -778,6 +785,7 @@ const saveAdminEditor = async () => {
     });
 
     // Save shared progress to backend so it shows up on other devices (e.g. Manager view)
+    console.log("handleToggleItem: attempting save. currentGame:", currentGame, "nextSectionsSnapshot:", !!nextSectionsSnapshot);
     if (currentGame && nextSectionsSnapshot) {
       const key = getGameKey(currentGame);
       if (key) {
