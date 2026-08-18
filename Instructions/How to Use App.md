@@ -46,6 +46,18 @@ When you log in with the Tech password, you'll see all sections (e.g. Front Tabl
 
 > **Note:** Take a screenshot of your completed section(s) when you're done and send it to your Manager. This is your backup record in case anything doesn't save properly.
 
+## Phone Browser Requirements
+
+**Best option — iPhone or Android:** Use Chrome. Android usually has it by default; iPhone users can download it free from the App Store.
+
+**If you can't/don't want to use Chrome on iPhone (Safari):**
+- Go to Settings → Safari
+- Turn OFF "Prevent Cross-Site Tracking"
+- Turn OFF "Block All Cookies"
+- Do NOT use Private Browsing mode — use a regular tab
+
+>> **Note:** Even with these settings, Safari is less reliable at saving your progress than Chrome. If your checkboxes keep resetting, screenshot your completed work as backup and report your progress verbally to your Manager.
+
 ---
 
 ## Manager / Admin View
