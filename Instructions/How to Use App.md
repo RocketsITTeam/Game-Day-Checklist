@@ -56,7 +56,7 @@ When you log in with the Tech password, you'll see all sections (e.g. Front Tabl
 - Turn OFF "Block All Cookies"
 - Do NOT use Private Browsing mode — use a regular tab
 
->> **Note:** Even with these settings, Safari is less reliable at saving your progress than Chrome. If your checkboxes keep resetting, screenshot your completed work as backup and report your progress verbally to your Manager.
+> **Note:** Even with these settings, Safari is less reliable at saving your progress than Chrome. If your checkboxes keep resetting, screenshot your completed work as backup and report your progress verbally to your Manager.
 
 ---
 
