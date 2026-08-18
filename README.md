@@ -20,7 +20,7 @@ The Game Day Checklist app streamlines the coordination of IT operations before,
 Each game day creates a fresh checklist instance, and users across three roles - Tech, Manager, and Admin — interact with it at different levels of access and responsibility.
 Instructions for how to use the app are here: 
 
-- [How to Use the App](Instructions/How-to-Use-App.md)
+- [How to Use the App](Instructions/How to Use App.md)
 
 ## Features
 
