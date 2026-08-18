@@ -226,6 +226,48 @@ app.put("/assignments/:gameKey/:tab", (req, res) => {
   }
 });
 
+// Get checkbox progress for a game/tab (shared across all devices)
+app.get("/progress/:gameKey/:tab", (req, res) => {
+  const { gameKey, tab } = req.params;
+  const progressPath = path.join(__dirname, "data", `progress-${gameKey}-${tab}.json`);
+
+  try {
+    if (fs.existsSync(progressPath)) {
+      const json = fs.readFileSync(progressPath, "utf-8");
+      res.json(JSON.parse(json));
+    } else {
+      // Return empty progress if file doesn't exist yet
+      res.json({});
+    }
+  } catch (err) {
+    console.error("Error reading progress:", err);
+    res.status(500).json({ error: "Failed to load progress" });
+  }
+});
+
+// Save checkbox progress for a game/tab (Tech or Admin can save)
+app.put("/progress/:gameKey/:tab", (req, res) => {
+  const password = req.headers["x-password"];
+  const TECH_PASSWORD = process.env.TECH_PASSWORD;
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+
+  if (password !== TECH_PASSWORD && password !== ADMIN_PASSWORD) {
+    return res.status(403).json({ error: "Forbidden" });
+  }
+
+  const { gameKey, tab } = req.params;
+  const progressPath = path.join(__dirname, "data", `progress-${gameKey}-${tab}.json`);
+
+  try {
+    const progress = req.body;
+    fs.writeFileSync(progressPath, JSON.stringify(progress, null, 2), "utf-8");
+    res.json({ ok: true });
+  } catch (err) {
+    console.error("Error writing progress:", err);
+    res.status(500).json({ error: "Failed to save progress" });
+  }
+});
+
 
 // Health check
 app.get("/health", (req, res) => {
