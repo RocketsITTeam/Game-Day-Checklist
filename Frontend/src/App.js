@@ -454,6 +454,46 @@ async function saveProgress(gameKey, tab, progress, password) {
   }
 }
 
+// Build the { items, managerVerified, verifiedAt, tasks } entry for ONE section
+function buildSectionProgressEntry(section) {
+  const entry = {
+    items: {},
+    managerVerified: !!section.managerVerified,
+    verifiedAt: section.verifiedAt ?? null,
+    tasks: {},
+  };
+
+  const { list: taskGroups } = getTaskGroups(section);
+  if (taskGroups.length > 0) {
+    taskGroups.forEach((task) => {
+      getTaskItems(task).forEach((item) => {
+        entry.items[item.id] = !!item.completed;
+      });
+      entry.tasks[task.id] = {
+        managerVerified: !!task.managerVerified,
+        verifiedAt: task.verifiedAt ?? null,
+      };
+    });
+  } else {
+    const items = Array.isArray(section.items) ? section.items : [];
+    items.forEach((item) => {
+      entry.items[item.id] = !!item.completed;
+    });
+  }
+
+  return entry;
+}
+
+// Extract progress for JUST one section: { [sectionKey]: { items, managerVerified, verifiedAt, tasks } }
+// Use this (not extractProgress) when saving after a single checkbox/verification change,
+// so the save only touches that section on the backend and doesn't overwrite other
+// techs' in-progress sections with a stale local copy.
+function extractSectionProgress(sections, sectionKey) {
+  const section = sections?.[sectionKey];
+  if (!section) return {};
+  return { [sectionKey]: buildSectionProgressEntry(section) };
+}
+
 // Extract { sectionKey: { items: { itemId: completed }, managerVerified, verifiedAt,
 //                          tasks: { taskId: { managerVerified, verifiedAt } } } }
 function extractProgress(sections) {
@@ -812,6 +852,9 @@ const saveAdminEditor = async () => {
     setSections(nextState);
 
     // Save shared progress to backend so it shows up on other devices (e.g. Manager view)
+    // Only this ONE section is sent — the backend merges it in without touching
+    // any other section, so simultaneous saves from other techs in other
+    // sections can't get overwritten.
     if (currentGame && nextState) {
       const key = getGameKey(currentGame);
       if (key) {
@@ -819,7 +862,7 @@ const saveAdminEditor = async () => {
         const authData = storedAuth ? JSON.parse(storedAuth) : null;
         const password = authData?.password;
 
-        const progressToSave = extractProgress(nextState);
+        const progressToSave = extractSectionProgress(nextState, sectionKey);
         await saveProgress(key, activeTab, progressToSave, password);
       }
     }
@@ -861,7 +904,8 @@ const saveAdminEditor = async () => {
 
     setSections(nextState);
 
-    // Save shared verification status to backend so Techs see it after refreshing
+    // Save shared verification status to backend so Techs see it after refreshing.
+    // Only this ONE section is sent, merged in on the backend, same as handleToggleItem.
     if (currentGame && nextState) {
       const key = getGameKey(currentGame);
       if (key) {
@@ -869,7 +913,7 @@ const saveAdminEditor = async () => {
         const authData = storedAuth ? JSON.parse(storedAuth) : null;
         const password = authData?.password;
 
-        const progressToSave = extractProgress(nextState);
+        const progressToSave = extractSectionProgress(nextState, sectionKey);
         await saveProgress(key, activeTab, progressToSave, password);
       }
     }
